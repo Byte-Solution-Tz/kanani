@@ -71,10 +71,11 @@ export default function ProductCategories() {
 
                   return (
                     <li key={item.key}>
-                      <button
-                        type="button"
-                        onClick={() => setActiveKey(item.key)}
-                        className={`relative w-full px-2 py-5 text-left text-sm transition sm:px-4 sm:text-base lg:px-8 ${
+                      <Link
+                        href={`/products?category=${item.key}`}
+                        onMouseEnter={() => setActiveKey(item.key)}
+                        onFocus={() => setActiveKey(item.key)}
+                        className={`relative block w-full px-2 py-5 text-left text-sm transition sm:px-4 sm:text-base lg:px-8 ${
                           isActive ? "bg-white/10 font-semibold" : "hover:bg-white/8"
                         }`}
                       >
@@ -82,7 +83,7 @@ export default function ProductCategories() {
                         {isActive ? (
                           <span className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rotate-45 bg-[var(--kanani-brand-red)]" />
                         ) : null}
-                      </button>
+                      </Link>
                     </li>
                   );
                 })}
@@ -104,10 +105,10 @@ export default function ProductCategories() {
               </p>
 
               <Link
-                href="/products"
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--kanani-brand-blue)] px-8 py-3 text-base font-medium text-white transition hover:brightness-110 sm:mt-10 sm:px-12 sm:py-4 sm:text-lg"
+                href={`/products?category=${activeItem.key}`}
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-(--kanani-brand-blue) px-8 py-3 text-base font-medium text-white transition hover:brightness-110 sm:mt-10 sm:px-12 sm:py-4 sm:text-lg"
               >
-                View Detail
+                Browse {activeItem.title}
               </Link>
             </div>
 

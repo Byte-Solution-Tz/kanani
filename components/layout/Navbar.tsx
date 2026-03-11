@@ -19,18 +19,18 @@ export default function Navbar() {
         </div>
 
         <nav className="hidden items-center gap-7 text-xs font-semibold md:flex">
-          <a href="#" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          <Link href="/" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             Home
-          </a>
-          <a href="#products" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          </Link>
+          <Link href="/products" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             Products
-          </a>
-          <a href="#industries" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          </Link>
+          <Link href="/#industries" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             Industries
-          </a>
-          <a href="#about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          </Link>
+          <Link href="/#about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             About Us
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
