@@ -1,49 +1,73 @@
-import { BoxesIcon, ToolsIcon, TruckIcon, WalletIcon } from "@/components/shared/icons";
+import Link from "next/link";
+
+import { ArrowRightIcon, BoxesIcon, ToolsIcon, TruckIcon, WalletIcon } from "@/components/shared/icons";
 
 const benefits = [
   {
-    title: "Reliable Supply",
+    title: "Company Profile",
     description:
-      "Seamless logistics chain ensuring timely delivery regardless of project scale.",
+      "A reliable construction and industrial supply company focused on quality delivery and operational excellence.",
     icon: TruckIcon,
   },
   {
-    title: "Competitive Pricing",
+    title: "Company Culture",
     description:
-      "Direct sourcing from manufacturers allows us to offer market-leading rates.",
+      "We build long-term partnerships through transparency, consistency, and a client-first way of working.",
     icon: WalletIcon,
   },
   {
-    title: "Bulk Availability",
+    title: "Research & Development",
     description:
-      "Large-scale inventory capacity to support mega-projects without shortage.",
+      "Our team continuously improves sourcing, quality control, and logistics efficiency to serve large projects better.",
     icon: BoxesIcon,
   },
   {
-    title: "Industrial Expertise",
+    title: "Regional Reach",
     description:
-      "Expert consultants who understand technical industrial specifications.",
+      "We support contractors, developers, and industrial buyers across Tanzania with dependable supply solutions.",
     icon: ToolsIcon,
   },
 ];
 
 export default function WhyChooseSection() {
   return (
-    <section className="theme-section-brand py-20">
+    <section className="bg-[#eef0f3] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-black sm:text-5xl">Why Choose Kanani Services</h2>
-          <div className="mx-auto mt-4 h-1 w-20 bg-[var(--kanani-brand-gold-soft)]" />
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-5">
+            <p className="text-sm uppercase tracking-wide text-slate-500">Company Profile</p>
+            <div className="mt-3 h-1 w-48 bg-[var(--kanani-brand-red)]" />
+            <h2 className="mt-4 text-4xl font-black text-[var(--kanani-text)] sm:text-5xl">Why Choose Us</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="text-base leading-8 text-[var(--kanani-muted-strong)]">
+              Kanani Services delivers professional construction and industrial supply support with
+              a strong focus on quality, consistency, and responsive customer service. We combine
+              reliable sourcing, technical understanding, and logistics capability to keep projects
+              moving without delays.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {benefits.map((benefit) => (
-            <article key={benefit.title} className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded bg-white/15 text-[var(--kanani-brand-gold-soft)]">
-                <benefit.icon className="h-5 w-5" />
+            <article
+              key={benefit.title}
+              className="relative border border-white/70 bg-white px-7 py-8 shadow-[0_10px_24px_rgba(16,34,70,0.06)]"
+            >
+              <span className="absolute left-5 top-5 h-12 w-12 rounded-full bg-[rgba(227,31,47,0.15)]" />
+              <div className="relative mb-6 flex h-12 w-12 items-center justify-center text-[var(--kanani-brand-red)]">
+                <benefit.icon className="h-9 w-9" />
               </div>
-              <h3 className="text-lg font-extrabold">{benefit.title}</h3>
-              <p className="mx-auto mt-2 max-w-56 text-sm text-blue-50/95">{benefit.description}</p>
+              <h3 className="text-2xl font-semibold text-[var(--kanani-text)]">{benefit.title}</h3>
+              <p className="mt-4 text-base leading-8 text-[var(--kanani-muted-strong)]">{benefit.description}</p>
+              <Link
+                href="/about"
+                className="mt-7 inline-flex items-center gap-2 text-base font-medium text-[var(--kanani-muted-strong)] transition hover:text-[var(--kanani-brand-red)]"
+              >
+                Read More
+                <ArrowRightIcon className="h-4 w-4 text-[var(--kanani-brand-gold)]" />
+              </Link>
             </article>
           ))}
         </div>

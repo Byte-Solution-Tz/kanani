@@ -13,8 +13,8 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <AboutSection />
-      <ProductCategories />
       <WhyChooseSection />
+      <ProductCategories />
       <IndustriesSection />
       <CtaSection />
       <Footer />

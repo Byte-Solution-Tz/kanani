@@ -9,8 +9,11 @@ type ProductCardProps = {
 
 export default function ProductCard({ item }: ProductCardProps) {
   return (
-    <Link href={`/products/${item.slug}`} className="group block">
-      <div className="relative mb-3 aspect-video overflow-hidden rounded-lg border border-slate-800 bg-slate-900">
+    <Link
+      href={`/products/${item.slug}`}
+      className="theme-panel group block rounded-xl border border-[var(--kanani-line)] p-3"
+    >
+      <div className="relative mb-3 aspect-video overflow-hidden rounded-lg border border-[var(--kanani-line)] bg-white">
         <Image
           src={item.image}
           alt={item.title}
@@ -19,10 +22,10 @@ export default function ProductCard({ item }: ProductCardProps) {
           className="object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
-      <h5 className="font-bold text-white transition-colors group-hover:text-[var(--kanani-brand-red-soft)]">
+      <h5 className="font-bold text-[var(--kanani-text)] transition-colors group-hover:text-[var(--kanani-brand-blue)]">
         {item.title}
       </h5>
-      <p className="text-xs text-slate-400">{item.subtitle}</p>
+      <p className="theme-muted text-xs">{item.subtitle}</p>
     </Link>
   );
 }

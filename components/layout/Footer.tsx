@@ -10,7 +10,7 @@ export default function Footer() {
               <PinIcon className="h-11 w-11 text-white/90" />
               <div>
                 <p className="text-xl font-bold leading-tight">Location:</p>
-                <p className="mt-2 text-base text-white/80">Industrial Area, Nairobi, Kenya</p>
+                <p className="mt-2 text-base text-white/80">Mivumoni, Dar es Salaam Tanzania</p>
               </div>
             </div>
 
@@ -18,7 +18,7 @@ export default function Footer() {
               <MailIcon className="h-11 w-11 text-white/90" />
               <div>
                 <p className="text-xl font-bold leading-tight">Email:</p>
-                <p className="mt-2 text-base text-white/80">info@kanani.co.ke</p>
+                <p className="mt-2 text-base text-white/80">kanani.co.tz</p>
               </div>
             </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
               <PhoneIcon className="h-11 w-11 text-white/90" />
               <div>
                 <p className="text-xl font-bold leading-tight">Phone:</p>
-                <p className="mt-2 text-base text-white/80">+254 700 000 000</p>
+                <p className="mt-2 text-base text-white/80">+255 745 120 612</p>
               </div>
             </div>
           </div>

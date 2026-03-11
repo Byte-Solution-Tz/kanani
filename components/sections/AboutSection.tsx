@@ -19,7 +19,8 @@ export default function AboutSection() {
         </div>
 
         <div>
-          <p className="theme-gold text-xs font-extrabold uppercase tracking-[0.2em]">Who We Are</p>
+          <p className="text-sm uppercase tracking-widest text-slate-500">Who We Are</p>
+          <div className="mt-2 h-[2px] w-28 bg-[var(--kanani-brand-red)] sm:w-40" />
           <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
             Professional Supply Solutions for Large-Scale Projects
           </h2>
