@@ -68,32 +68,32 @@ const industries = [
 
 export default function HomePage() {
   return (
-    <main className="bg-[#04142a] text-white">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#020e1f]/95 backdrop-blur">
+    <main className="theme-shell">
+      <header className="theme-header sticky top-0 z-50 border-b backdrop-blur">
         <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-[#0a56aa] text-[#d6af3f]">
+            <div className="flex h-8 w-8 items-center justify-center rounded bg-[var(--kanani-brand-blue)] text-[var(--kanani-brand-gold-soft)]">
               <FoundationIcon className="h-4 w-4" />
             </div>
             <div className="leading-none">
               <p className="text-base font-black tracking-wide">KANANI</p>
-              <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#d6af3f]">
+              <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[var(--kanani-brand-gold-soft)]">
                 Services Limited
               </p>
             </div>
           </div>
 
           <nav className="hidden items-center gap-7 text-xs font-semibold md:flex">
-            <a href="#" className="transition hover:text-[#d6af3f]">
+            <a href="#" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
               Home
             </a>
-            <a href="#products" className="transition hover:text-[#d6af3f]">
+            <a href="#products" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
               Products
             </a>
-            <a href="#industries" className="transition hover:text-[#d6af3f]">
+            <a href="#industries" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
               Industries
             </a>
-            <a href="#about" className="transition hover:text-[#d6af3f]">
+            <a href="#about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
               About Us
             </a>
           </nav>
@@ -101,14 +101,14 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             <button
               aria-label="Search"
-              className="hidden text-slate-300 transition hover:text-white md:inline-flex"
+              className="hidden text-slate-500 transition hover:text-[var(--kanani-brand-blue)] md:inline-flex"
               type="button"
             >
               <SearchIcon className="h-4 w-4" />
             </button>
             <Link
               href="/contact"
-              className="rounded bg-[#0a56aa] px-3 py-2 text-xs font-semibold transition hover:bg-[#0d63c4]"
+              className="btn-theme-primary rounded px-3 py-2 text-xs font-semibold transition"
             >
               Get a Quote
             </Link>
@@ -116,7 +116,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="relative min-h-[83vh] overflow-hidden">
+      <section className="relative min-h-[83vh] overflow-hidden text-white">
         <Image
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1UOSNBIk4TnSSMwddbR92xfHyfrdnCLBar08u7GuBXN-4prYnH7YUhfpHgQBjLvZS_woZ91ADURqViJPFWHuRp0HBdLM3RyqUCMjMaxMeeuRIzUfJmLkgB9shxL1pnl3A3CkWBj3si9cWUcQIkAZEj7yn9-Sdn3Ry9wSBjbyjTKsw8LGUP3Z0I8tWyvarvo2zFwU2MUFj0ag8IKY628Fl6OtctDqsSCyytof-fxbmelEhqJXTshIwPcNetr7xoXaTfivXLVUU6-GH"
           alt="Construction site with cranes and structural concrete"
@@ -125,17 +125,17 @@ export default function HomePage() {
           sizes="100vw"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#04142a] via-[#04142a]/85 to-[#04142a]/40" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#04142a] to-transparent" />
+        <div className="hero-overlay absolute inset-0" />
+        <div className="hero-fade absolute inset-x-0 bottom-0 h-28" />
 
         <div className="relative mx-auto flex max-w-7xl items-center px-4 py-20 sm:px-6 lg:min-h-[83vh] lg:px-8">
           <div className="max-w-3xl">
-            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d6af3f]/35 bg-[#d6af3f]/20 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#d6af3f]">
-              <span className="inline-block h-2 w-2 rounded-full bg-[#d6af3f]" /> ISO 9001 CERTIFIED SUPPLIER
+            <p className="badge-theme mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em]">
+              <span className="inline-block h-2 w-2 rounded-full bg-[var(--kanani-brand-gold-soft)]" /> ISO 9001 CERTIFIED SUPPLIER
             </p>
 
             <h1 className="text-4xl font-black leading-[1.03] tracking-tight sm:text-5xl lg:text-7xl">
-              Trusted Supplier of <span className="text-[#d6af3f]">Cement, Steel</span>, Scrap
+              Trusted Supplier of <span className="theme-gold">Cement, Steel</span>, Scrap
               <br />
               &amp; Hardware
             </h1>
@@ -148,14 +148,14 @@ export default function HomePage() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 rounded bg-[#0a56aa] px-6 py-3 text-sm font-bold transition hover:bg-[#0d63c4]"
+                className="btn-theme-primary inline-flex items-center gap-2 rounded px-6 py-3 text-sm font-bold transition"
               >
                 View Products
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact"
-                className="rounded border border-white/35 bg-black/25 px-6 py-3 text-sm font-bold backdrop-blur transition hover:bg-black/35"
+                className="btn-theme-gold rounded px-6 py-3 text-sm font-bold transition"
               >
                 Contact Us
               </Link>
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="bg-[#06172f] py-20">
+      <section id="about" className="theme-section-main py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="relative">
             <Image
@@ -172,49 +172,49 @@ export default function HomePage() {
               alt="Warehouse shelves filled with construction supplies"
               width={900}
               height={600}
-              className="h-full max-h-[430px] w-full rounded-lg border border-white/10 object-cover"
+              className="theme-border h-full max-h-[430px] w-full rounded-lg border object-cover"
             />
-            <div className="absolute -bottom-5 right-0 rounded bg-[#0a56aa] px-7 py-5 shadow-lg shadow-black/20 sm:right-5">
+            <div className="absolute -bottom-5 right-0 rounded bg-[var(--kanani-brand-blue)] px-7 py-5 shadow-lg shadow-black/20 sm:right-5">
               <p className="text-3xl font-black">15+</p>
               <p className="text-xs text-slate-200">Years of Experience</p>
             </div>
           </div>
 
           <div>
-            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#d6af3f]">Who We Are</p>
+            <p className="theme-gold text-xs font-extrabold uppercase tracking-[0.2em]">Who We Are</p>
             <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
               Professional Supply Solutions for Large-Scale Projects
             </h2>
-            <p className="mt-6 max-w-xl text-slate-300">
+            <p className="theme-muted mt-6 max-w-xl">
               Kanani Services Limited is a premier provider of essential construction material and
               industrial supplies. We pride ourselves on being a reliable partner for large-scale
               developers and independent contractors alike.
             </p>
-            <p className="mt-4 max-w-xl text-slate-300">
+            <p className="theme-muted mt-4 max-w-xl">
               Ensuring quality and consistency in every delivery is our core mission. From massive
               structural steel components to specialized hardware, we source only the best
               materials to support project safety and durability.
             </p>
 
-            <div className="mt-10 grid max-w-lg grid-cols-2 gap-6 border-t border-white/10 pt-6">
+            <div className="theme-border mt-10 grid max-w-lg grid-cols-2 gap-6 border-t pt-6">
               <div>
                 <p className="text-3xl font-black">500+</p>
-                <p className="text-sm text-slate-300">Global Partners</p>
+                <p className="theme-muted text-sm">Global Partners</p>
               </div>
               <div>
                 <p className="text-3xl font-black">24/7</p>
-                <p className="text-sm text-slate-300">Logistics Support</p>
+                <p className="theme-muted text-sm">Logistics Support</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="products" className="bg-[#051427] py-20">
+      <section id="products" className="theme-section-deep py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h2 className="text-3xl font-black sm:text-5xl">Our Product Categories</h2>
-            <p className="mt-4 text-slate-300">
+            <p className="theme-muted mt-4">
               Premium materials sourced from industry-leading manufacturers to meet the highest
               standards of construction and engineering.
             </p>
@@ -224,7 +224,7 @@ export default function HomePage() {
             {categoryCards.map((category) => (
               <article
                 key={category.title}
-                className="group overflow-hidden rounded border border-white/10 bg-[#0a1d35] transition hover:-translate-y-1 hover:border-[#d6af3f]/40"
+                className="theme-panel theme-border group overflow-hidden rounded border transition hover:-translate-y-1 hover:border-[color:rgba(215,173,85,0.42)]"
               >
                 <div className="relative h-44 overflow-hidden">
                   <Image
@@ -237,10 +237,10 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-extrabold">{category.title}</h3>
-                  <p className="mt-2 min-h-14 text-xs leading-5 text-slate-300">{category.description}</p>
+                  <p className="theme-muted mt-2 min-h-14 text-xs leading-5">{category.description}</p>
                   <Link
                     href="/products"
-                    className="mt-3 inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider text-[#d6af3f]"
+                    className="theme-gold mt-3 inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider"
                   >
                     View Category
                     <ArrowRightIcon className="h-3 w-3" />
@@ -252,35 +252,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#0a56aa] py-20">
+      <section className="theme-section-brand py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-black sm:text-5xl">Why Choose Kanani Services</h2>
-            <div className="mx-auto mt-4 h-1 w-20 bg-[#d6af3f]" />
+            <div className="mx-auto mt-4 h-1 w-20 bg-[var(--kanani-brand-gold-soft)]" />
           </div>
 
           <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit) => (
               <article key={benefit.title} className="text-center">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded bg-white/15 text-[#d6af3f]">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded bg-white/15 text-[var(--kanani-brand-gold-soft)]">
                   <benefit.icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-extrabold">{benefit.title}</h3>
-                <p className="mx-auto mt-2 max-w-56 text-sm text-blue-100">{benefit.description}</p>
+                <p className="mx-auto mt-2 max-w-56 text-sm text-blue-50/95">{benefit.description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="industries" className="bg-[#041225] py-20">
+      <section id="industries" className="theme-section-main py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-2xl">
-              <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#d6af3f]">Our Reach</p>
+              <p className="theme-gold text-xs font-extrabold uppercase tracking-[0.2em]">Our Reach</p>
               <h2 className="mt-3 text-3xl font-black sm:text-5xl">Industries We Serve</h2>
             </div>
-            <p className="max-w-sm text-sm text-slate-300">
+            <p className="theme-muted max-w-sm text-sm">
               Specialized supply solutions tailored for diverse industrial and development sectors.
             </p>
           </div>
@@ -289,9 +289,9 @@ export default function HomePage() {
             {industries.map((industry) => (
               <article
                 key={industry.title}
-                className="rounded border border-white/10 bg-[#091c35] p-6 transition hover:border-[#d6af3f]/40"
+                className="theme-panel theme-border rounded border p-6 transition hover:border-[color:rgba(215,173,85,0.42)]"
               >
-                <industry.icon className="h-6 w-6 text-[#d6af3f]" />
+                <industry.icon className="h-6 w-6 text-[var(--kanani-brand-gold-soft)]" />
                 <h3 className="mt-4 text-lg font-extrabold">{industry.title}</h3>
               </article>
             ))}
@@ -299,18 +299,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#041225] pb-20">
+      <section className="theme-section-main pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-8 rounded-lg border border-white/10 bg-[#071a32] px-6 py-10 text-center md:flex-row md:text-left">
+          <div className="theme-panel-soft theme-border flex flex-col items-center justify-between gap-8 rounded-lg border px-6 py-10 text-center md:flex-row md:text-left">
             <div>
               <h2 className="text-2xl font-black sm:text-4xl">Need construction materials for your project?</h2>
-              <p className="mt-2 text-sm text-slate-300">
+              <p className="mt-2 text-sm text-blue-100">
                 Contact Kanani Services Limited today for a detailed quote and consulting.
               </p>
             </div>
             <Link
               href="/contact"
-              className="whitespace-nowrap rounded bg-[#0a56aa] px-6 py-3 text-sm font-bold transition hover:bg-[#0d63c4]"
+              className="btn-theme-gold whitespace-nowrap rounded px-6 py-3 text-sm font-bold transition"
             >
               Contact Us Today
             </Link>
@@ -318,67 +318,105 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#020914] py-14 text-slate-300">
+      <footer className="relative mt-24 bg-[linear-gradient(145deg,#1f3f63_0%,#173857_55%,#123250_100%)] text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded bg-[#0a56aa] text-[#d6af3f]">
-                  <FoundationIcon className="h-4 w-4" />
+          <div className="relative -top-12 z-10 rounded-[2.5rem] border border-white/10 bg-[#1a3a57] px-6 py-8 shadow-[0_18px_40px_rgba(4,20,43,0.32)] md:px-10">
+            <div className="grid gap-6 md:grid-cols-3 md:gap-4">
+              <div className="flex items-center gap-4 border-white/10 md:border-r md:pr-8">
+                <PinIcon className="h-11 w-11 text-white/90" />
+                <div>
+                  <p className="text-xl font-bold leading-tight">Location:</p>
+                  <p className="mt-2 text-base text-white/80">Industrial Area, Nairobi, Kenya</p>
                 </div>
-                <p className="text-base font-black text-white">KANANI</p>
               </div>
-              <p className="mt-4 text-sm leading-6 text-slate-400">
-                Leading the way in industrial supply and construction material. Excellence in every
-                delivery, integrity in every partnership.
-              </p>
-              <div className="mt-4 flex gap-2">
-                <span className="inline-block h-2 w-2 rounded-full bg-slate-500" />
-                <span className="inline-block h-2 w-2 rounded-full bg-slate-500" />
-                <span className="inline-block h-2 w-2 rounded-full bg-slate-500" />
+
+              <div className="flex items-center gap-4 border-white/10 md:border-r md:px-8">
+                <MailIcon className="h-11 w-11 text-white/90" />
+                <div>
+                  <p className="text-xl font-bold leading-tight">Email:</p>
+                  <p className="mt-2 text-base text-white/80">info@kanani.co.ke</p>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white">Quick Links</p>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <Link href="/">Home</Link>
-                </li>
-                <li>
-                  <Link href="/products">Product Catalog</Link>
-                </li>
-                <li>
-                  <Link href="/contact">Bulk Inquiries</Link>
-                </li>
-                <li>
-                  <a href="#about">About Us</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white">Contact Details</p>
-              <ul className="mt-4 space-y-3 text-sm text-slate-300">
-                <li>Industrial Area, Phase 1, Nairobi, Kenya</li>
-                <li>+254 700 000 000</li>
-                <li>info@kanani.co.ke</li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white">Our Location</p>
-              <div className="mt-4 flex h-28 items-center justify-center rounded border border-white/10 bg-[#16253b]">
-                <PinIcon className="h-11 w-11 text-slate-400" />
+              <div className="flex items-center gap-4 md:pl-8">
+                <PhoneIcon className="h-11 w-11 text-white/90" />
+                <div>
+                  <p className="text-xl font-bold leading-tight">Phone:</p>
+                  <p className="mt-2 text-base text-white/80">+254 700 000 000</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
-            <p>© 2024 Kanani Services Limited. All rights reserved.</p>
-            <div className="flex gap-5">
+          <div className="-mt-2 grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-4">
+            <div className="border-b border-white/10 pb-8 md:border-0 md:pr-8 lg:border-r lg:pb-0">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--kanani-brand-red)] text-white">
+                  <FoundationIcon className="h-5 w-5" />
+                </div>
+                <p className="text-3xl font-extrabold">Kanani</p>
+              </div>
+              <p className="mt-6 text-base leading-8 text-white/80">
+                Reliable industrial supply partner for construction and infrastructure projects
+                across East Africa.
+              </p>
+              <div className="mt-6 flex items-center gap-4">
+                <SocialDot label="f" />
+                <SocialDot label="t" />
+                <SocialDot label="in" />
+                <SocialDot label="p" />
+                <SocialDot label="v" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-3xl font-semibold">Navigation</p>
+              <ul className="mt-8 space-y-4 text-base text-white/80">
+                <li>- About us</li>
+                <li>- Contact us</li>
+                <li>- Product Catalog</li>
+                <li>- Recent Post</li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-3xl font-semibold">All Services</p>
+              <ul className="mt-8 space-y-4 text-base text-white/80">
+                <li>- Cement Supply</li>
+                <li>- Steel Products</li>
+                <li>- Hardware Supplies</li>
+                <li>- Scrap Materials</li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-3xl font-semibold">Newsletter</p>
+              <p className="mt-8 text-base leading-8 text-white/80">
+                Subscribe for stock updates, price alerts, and project supply insights from Kanani
+                Services.
+              </p>
+              <div className="mt-8 flex items-center justify-between gap-4 rounded-lg border border-white/12 bg-white/10 px-5 py-4">
+                <input
+                  type="email"
+                  placeholder="Email Address *"
+                  className="w-full bg-transparent text-base text-white placeholder:text-white/65 focus:outline-none"
+                />
+                <button type="button" aria-label="Send newsletter request" className="text-white/80">
+                  <MailIcon className="h-8 w-8" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 border-t border-white/10 py-8 text-sm text-white/80 md:flex-row md:items-center md:justify-between">
+            <p>
+              Copyright © <span className="text-[var(--kanani-brand-red-soft)]">2026</span> | All
+              Rights Reserved.
+            </p>
+            <div className="flex items-center gap-5">
+              <a href="#">Term and Service</a>
+              <span className="text-[var(--kanani-brand-red-soft)]">||</span>
               <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
             </div>
           </div>
         </div>
@@ -413,6 +451,37 @@ function ArrowRightIcon({ className }: { className?: string }) {
       <path d="M5 12h14" strokeWidth="2" />
       <path d="m13 6 6 6-6 6" strokeWidth="2" />
     </svg>
+  );
+}
+
+function MailIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <rect x="3" y="5" width="18" height="14" rx="1.5" strokeWidth="1.8" />
+      <path d="m4 7 8 6 8-6" strokeWidth="1.8" />
+      <path d="M10 4h4" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path
+        d="M7.8 3.8 5 6.6c-1 1 0 3.9 2.3 6.2s5.2 3.3 6.2 2.3l2.8-2.8c.4-.4.4-1 0-1.4l-2-2a1 1 0 0 0-1.4 0l-1.3 1.2c-.8-.3-1.8-1.1-2.6-2-.9-.9-1.7-1.8-2-2.6l1.2-1.3a1 1 0 0 0 0-1.4l-2-2a1 1 0 0 0-1.4 0Z"
+        strokeWidth="1.8"
+      />
+      <path d="M15.5 4.5a7 7 0 0 1 4 4" strokeWidth="1.8" />
+      <path d="M14.5 8a4.5 4.5 0 0 1 2 2" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function SocialDot({ label }: { label: string }) {
+  return (
+    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-white/20 px-1 text-xs font-bold lowercase text-white/90">
+      {label}
+    </span>
   );
 }
 
