@@ -1,52 +1,110 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ArrowRightIcon } from "@/components/shared/icons";
+import {
+  ArrowRightIcon,
+  BoxesIcon,
+  FoundationIcon,
+  TruckIcon,
+  WalletIcon,
+} from "@/components/shared/icons";
+
+const trustPoints = [
+  {
+    label: "Bulk Availability",
+    detail: "Project-scale stock support",
+    icon: BoxesIcon,
+  },
+  {
+    label: "Reliable Logistics",
+    detail: "On-time dispatch and delivery",
+    icon: TruckIcon,
+  },
+  {
+    label: "Competitive Pricing",
+    detail: "Stable rates from trusted supply chains",
+    icon: WalletIcon,
+  },
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[83vh] overflow-hidden text-white">
-      <Image
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1UOSNBIk4TnSSMwddbR92xfHyfrdnCLBar08u7GuBXN-4prYnH7YUhfpHgQBjLvZS_woZ91ADURqViJPFWHuRp0HBdLM3RyqUCMjMaxMeeuRIzUfJmLkgB9shxL1pnl3A3CkWBj3si9cWUcQIkAZEj7yn9-Sdn3Ry9wSBjbyjTKsw8LGUP3Z0I8tWyvarvo2zFwU2MUFj0ag8IKY628Fl6OtctDqsSCyytof-fxbmelEhqJXTshIwPcNetr7xoXaTfivXLVUU6-GH"
-        alt="Construction site with cranes and structural concrete"
-        fill
-        priority
-        sizes="100vw"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      <div className="hero-overlay absolute inset-0" />
-      <div className="hero-fade absolute inset-x-0 bottom-0 h-28" />
+    <section className="relative overflow-hidden bg-[var(--kanani-brand-blue)] text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_80%_at_75%_5%,rgba(255,255,255,0.18),transparent_65%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-25">
+        <div className="h-full w-full bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:170px_170px]" />
+      </div>
 
-      <div className="relative mx-auto flex max-w-7xl items-center px-4 py-20 sm:px-6 lg:min-h-[83vh] lg:px-8">
-        <div className="max-w-3xl">
-          <p className="badge-theme mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em]">
-            <span className="inline-block h-2 w-2 rounded-full bg-[var(--kanani-brand-gold-soft)]" />
-            ISO 9001 CERTIFIED SUPPLIER
-          </p>
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-20 lg:pt-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+          <div className="lg:col-span-7">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-100">
+              <FoundationIcon className="h-3.5 w-3.5" />
+              Kanani Services Limited
+            </p>
 
-          <h1 className="text-4xl font-black leading-[1.03] tracking-tight sm:text-5xl lg:text-7xl">
-            Trusted Supplier of <span className="theme-gold">Cement, Steel</span>, Scrap
-            <br />
-            &amp; Hardware
-          </h1>
+            <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
+              Trusted Partner for
+              <br />
+              Cement, Steel, Scrap
+              <br />
+              &amp; Hardware Supply
+            </h1>
 
-          <p className="mt-6 max-w-2xl text-base text-slate-200 sm:text-lg">
-            Reliable supply solutions for contractors, developers, and industrial buyers across the
-            region. Delivering excellence since 2005.
-          </p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100">
+              We deliver consistent material supply for contractors, developers, and industrial
+              buyers with dependable logistics, practical pricing, and quality-first handling.
+            </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/products"
-              className="btn-theme-primary inline-flex items-center gap-2 rounded px-6 py-3 text-sm font-bold transition"
-            >
-              View Products
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-            <Link href="/contact" className="btn-theme-gold rounded px-6 py-3 text-sm font-bold transition">
-              Contact Us
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/products"
+                className="btn-theme-primary inline-flex items-center gap-2 rounded px-6 py-3 text-sm font-bold"
+              >
+                Explore Products
+                <ArrowRightIcon className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-theme-blue inline-flex items-center gap-2 rounded px-6 py-3 text-sm font-bold"
+              >
+                Request a Quote
+                <ArrowRightIcon className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
+
+          <div className="lg:col-span-5 lg:pt-8">
+            <div className="overflow-hidden rounded-2xl border border-white/30 bg-white/10 shadow-[0_20px_55px_rgba(5,18,43,0.35)]">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1UOSNBIk4TnSSMwddbR92xfHyfrdnCLBar08u7GuBXN-4prYnH7YUhfpHgQBjLvZS_woZ91ADURqViJPFWHuRp0HBdLM3RyqUCMjMaxMeeuRIzUfJmLkgB9shxL1pnl3A3CkWBj3si9cWUcQIkAZEj7yn9-Sdn3Ry9wSBjbyjTKsw8LGUP3Z0I8tWyvarvo2zFwU2MUFj0ag8IKY628Fl6OtctDqsSCyytof-fxbmelEhqJXTshIwPcNetr7xoXaTfivXLVUU6-GH"
+                  alt="Large-scale construction and material handling operations"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 42vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {trustPoints.map((point) => (
+            <article
+              key={point.label}
+              className="flex items-start gap-3 rounded-xl border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-sm"
+            >
+              <span className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white">
+                <point.icon className="h-4.5 w-4.5" />
+              </span>
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wide text-white">{point.label}</h3>
+                <p className="mt-1 text-sm text-blue-100">{point.detail}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

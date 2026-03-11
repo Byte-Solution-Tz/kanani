@@ -81,7 +81,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </section>
 
               <section>
-                <SectionHeading colorClass="bg-[var(--kanani-brand-red)]" title="Common Applications" />
+                <SectionHeading colorClass="bg-[var(--kanani-brand-red)]" title="Key Details" />
                 <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {product.applications.map((item) => (
                     <li

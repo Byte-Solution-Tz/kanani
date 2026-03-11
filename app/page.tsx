@@ -16,7 +16,7 @@ export default function HomePage() {
       <WhyChooseSection />
       <ProductCategories />
       <IndustriesSection />
-      <CtaSection />
+      {/* <CtaSection /> */}
       <Footer />
     </main>
   );

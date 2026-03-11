@@ -2,21 +2,21 @@ export const categories = [
   {
     id: "scrap",
     title: "Scrap Materials",
-    description: "Industrial scrap materials supplied to recyclers and foundries.",
+    description: "HMS, cast iron, structural scrap, and reliable scrap processing supply.",
   },
   {
     id: "steel",
     title: "Steel Products",
-    description: "Structural steel, reinforcement bars, and construction steel materials.",
+    description: "TMT bars, iron sheets (mabati), and structural steel beams and sections.",
   },
   {
     id: "cement",
     title: "Cement Supply",
-    description: "Bulk and bagged cement supply for construction projects.",
+    description: "Dangote cement distribution with bulk, bagged, and warehouse-backed supply.",
   },
   {
     id: "hardware",
-    title: "Hardware Supplies",
-    description: "Construction hardware, timber, gypsum boards, and roofing materials.",
+    title: "Hardware Suppliers",
+    description: "Timber, marine and gypsum boards, roofing, finishing, and building hardware.",
   },
 ];
