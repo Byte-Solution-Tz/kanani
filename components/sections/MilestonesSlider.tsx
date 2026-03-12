@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
-export type MilestoneItem = {
-  year: string;
-  title: string;
-  caption: string;
-  image: string;
-};
+import type { MilestoneItem } from "@/data/about";
 
 type MilestonesSliderProps = {
   milestones: MilestoneItem[];
