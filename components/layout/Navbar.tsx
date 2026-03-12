@@ -1,70 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const productMenu = [
-  {
-    title: "Scrap Materials",
-    href: "/products?category=scrap",
-    items: [
-      { label: "Heavy Melting Scrap (HMS)", href: "/products/heavy-melting-scrap-hms" },
-      { label: "Cast Iron & Structural Scrap", href: "/products/cast-iron-structural-scrap" },
-      {
-        label: "Reliable Scrap Metal Purchasing",
-        href: "/products/reliable-scrap-metal-purchasing",
-      },
-      { label: "Efficient Scrap Processing", href: "/products/efficient-scrap-processing" },
-    ],
-  },
-  {
-    title: "Steel Products",
-    href: "/products?category=steel",
-    items: [
-      {
-        label: "TMT Bars & Reinforcement Steel",
-        href: "/products/tmt-bars-reinforcement-steel",
-      },
-      {
-        label: "Iron Sheets (Mabati) & Roofing Materials",
-        href: "/products/iron-sheets-mabati-roofing-materials",
-      },
-      {
-        label: "Structural Steel, Beams & Sections",
-        href: "/products/structural-steel-beams-sections",
-      },
-    ],
-  },
-  {
-    title: "Cement Supply",
-    href: "/products?category=cement",
-    items: [
-      {
-        label: "Dangote Cement (Authorized Distributor)",
-        href: "/products/dangote-cement-authorized-distributor",
-      },
-      { label: "Bulk & Bagged Cement Supply", href: "/products/bulk-bagged-cement-supply" },
-      {
-        label: "Large Inventory in Secure Warehouses",
-        href: "/products/secure-warehouse-cement-stock",
-      },
-      { label: "Fast & Reliable Delivery", href: "/products/fast-reliable-cement-delivery" },
-    ],
-  },
-  {
-    title: "Hardware Suppliers",
-    href: "/products?category=hardware",
-    items: [
-      { label: "Timber & Construction Wood", href: "/products/timber-construction-wood" },
-      { label: "Marine & Gypsum Boards", href: "/products/marine-gypsum-boards" },
-      { label: "Roofing & Finishing Materials", href: "/products/roofing-finishing-materials" },
-      {
-        label: "Complete Range of Building Hardware",
-        href: "/products/complete-range-building-hardware",
-      },
-    ],
-  },
-];
+import { productMenu } from "@/data/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,15 +12,22 @@ export default function Navbar() {
   return (
     <header className="theme-header sticky top-0 z-50 border-b backdrop-blur">
       <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-black tracking-[0.12em] text-[var(--kanani-brand-blue)]">
-          KANANI
+        <Link href="/" aria-label="Kanan home" className="inline-flex items-center">
+          <Image
+            src="/images/kanan-nav.png"
+            alt="Kanan logo"
+            width={1013}
+            height={320}
+            priority
+            className="h-14 w-auto object-contain sm:h-16"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 text-xs font-semibold md:flex">
           <Link href="/" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             Home
           </Link>
-          <Link href="/#about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          <Link href="/about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             About Us
           </Link>
           <div
@@ -102,9 +48,9 @@ export default function Navbar() {
             </Link>
 
             {isProductsOpen ? (
-              <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1100px)] -translate-x-1/2 pt-3">
+              <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1320px)] -translate-x-1/2 pt-3">
                 <div className="rounded border border-slate-200 bg-white p-7 shadow-[0_22px_55px_rgba(16,34,70,0.18)]">
-                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
                     {productMenu.map((section) => (
                       <div key={section.title}>
                         <Link
@@ -176,7 +122,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/#about"
+              href="/about"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm font-semibold text-[var(--kanani-text)]"
             >

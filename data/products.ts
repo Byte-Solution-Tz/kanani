@@ -1,4 +1,4 @@
-export type ProductCategoryId = "scrap" | "steel" | "cement" | "hardware";
+export type ProductCategoryId = "scrap" | "steel" | "cement" | "hardware" | "plastic";
 
 export type ProductSpec = {
   property: string;
@@ -50,7 +50,7 @@ export type ProductDetailEntry = {
   relatedProducts: RelatedProduct[];
 };
 
-export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "cement", "hardware"];
+export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "cement", "hardware", "plastic"];
 
 export function isProductCategory(value: string): value is ProductCategoryId {
   return productCategoryIds.includes(value as ProductCategoryId);
@@ -68,6 +68,8 @@ const imageCement =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuD7ahCr8hFHGKBMe7VLmP2oKg7gBdEM1lo2fQr7FxD0WktDO9498N1xGRAMHbQb-rPAL0HzcZTCJ3d2PQzzz0qN1erPJh6bC608p2EPk0a3iNEd5wUEjaAu-S9bSExOktHSRo-6F1m9xuzgTewkO0u8e5b57vbI586oMpvbQLwep500w6PqG9aUdncCRf1mQrKf2kUp5uoQ9MZKGrpJh0L7CmvDjNzWjevJiHWsTYXk_wsXsarSmrhSxHLNux8PuHzzYmekvk9S9hao";
 const imageHardware =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCz8Tddr83Lrz8iEd5qRFd_HPiHMLwGa1YXbt6vSCsjNZprNlJu_BVsZx1-DifX-q8OnrWJKJTg10yasEdoOam0siHjJO_s2XlPIwLZd6QGI4e3aG_yRWW2e0Il54UdTm-QZDClkx2yhv_Ais0NV-hTrSfUsu4hMift0OYNRRXJqdJvBYS-W5p7AeELYDpTHq0fGWSeVwnxwd5I2JlLm4TdF5M89VVjaeExcXg0k7UNVtVSMaSVi8Bf_D9hHKxhgUzEVitRNy3CW212";
+const imagePlastic =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuAsEtlepplJ6mw_D9ug1ecMZ0ky9FKF7P69nu6JCPeAsN0aWUCXe7C2jA_xpBll6ZQzmeNmBxFq7jGWSNTDuYY_SfhNMlqE6KtxLohM-1ulZKjgE4w6TWmtr6d5ePukAcIYpKI5h-NlNm2r-gZAy29QXuYoaup6Ie10Yb28RZYDewkQ1Qn7NkZm9FveGe4W-2jkVPnwg-ioRyA7nLlt5nA5UtT-btUOHWORQzMJRjd6VHDc4OfNd-tHzgVghVqRxVi2Ni71DU5KzSZt";
 
 export const products: CatalogProduct[] = [
   {
@@ -310,6 +312,38 @@ export const products: CatalogProduct[] = [
       "One-stop procurement support",
     ],
   },
+  {
+    id: "plastic-recycling-pp-pe-pellets",
+    slug: "plastic-recycling-pp-pe-pellets",
+    name: "Plastic Recycling - PP & PE Pellets",
+    category: "plastic",
+    image: imagePlastic,
+    description:
+      "Recycled polypropylene (PP) and polyethylene (PE) pellets supplied for extrusion, molding, and industrial reuse.",
+    spec: "Reprocessed PP and PE pellet grades",
+    posterHighlights: [
+      "PP and PE recycled pellets",
+      "Industrial-grade recycled feedstock",
+      "Available in sorted and blended batches",
+      "Consistent moisture and contamination control",
+    ],
+  },
+  {
+    id: "colored-plastic-pellets",
+    slug: "colored-plastic-pellets",
+    name: "Color-Sorted Plastic Pellets",
+    category: "plastic",
+    image: imagePlastic,
+    description:
+      "Plastic pellets sold by color stream including black, yellow, and green for production-specific blending requirements.",
+    spec: "Black, yellow, and green pellet options",
+    posterHighlights: [
+      "Color-based pellet supply",
+      "Black, yellow, and green options",
+      "Batch consistency for production runs",
+      "Flexible bulk dispatch planning",
+    ],
+  },
 ];
 
 export const categoryLabels: Record<ProductCategoryId, string> = {
@@ -317,6 +351,7 @@ export const categoryLabels: Record<ProductCategoryId, string> = {
   steel: "Steel Products",
   cement: "Cement Supply",
   hardware: "Hardware Suppliers",
+  plastic: "Plastic Recycling",
 };
 
 const defaultFeatures: ProductFeature[] = [
@@ -363,6 +398,12 @@ const categoryApplications: Record<ProductCategoryId, string[]> = {
     "Roofing & Finishing Materials",
     "Complete Range of Building Hardware",
   ],
+  plastic: [
+    "Plastic Recycling - PP & PE Pellets",
+    "Color-Sorted Plastic Pellets",
+    "Black, yellow, and green pellet supply",
+    "PP and PE grade-based dispatch",
+  ],
 };
 
 const categorySpecs: Record<ProductCategoryId, ProductSpec[]> = {
@@ -389,6 +430,12 @@ const categorySpecs: Record<ProductCategoryId, ProductSpec[]> = {
     { property: "Supply Capacity", value: "Consistent stock for structural and finishing works" },
     { property: "Buyer Segments", value: "Contractors, developers, and industrial buyers" },
     { property: "Support", value: "One-stop project material consolidation" },
+  ],
+  plastic: [
+    { property: "Materials", value: "Recycled polypropylene (PP) and polyethylene (PE) pellets" },
+    { property: "Supply Options", value: "Sold by polymer type or by color stream" },
+    { property: "Color Streams", value: "Black, yellow, and green" },
+    { property: "Applications", value: "Extrusion, molding, and recycled industrial manufacturing" },
   ],
 };
 

@@ -19,4 +19,10 @@ export const categories = [
     title: "Hardware Suppliers",
     description: "Timber, marine and gypsum boards, roofing, finishing, and building hardware.",
   },
+  {
+    id: "plastic",
+    title: "Plastic Recycling",
+    description:
+      "Recycled PP and PE pellets supplied by resin type or by color including black, yellow, and green.",
+  },
 ];

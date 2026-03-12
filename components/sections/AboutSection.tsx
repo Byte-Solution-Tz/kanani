@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -34,6 +35,13 @@ export default function AboutSection() {
             structural steel components to specialized hardware, we source only the best materials
             to support project safety and durability.
           </p>
+
+          <Link
+            href="/about"
+            className="btn-theme-blue mt-8 inline-flex rounded-full px-6 py-2.5 text-sm font-semibold"
+          >
+            About Us
+          </Link>
 
           <div className="theme-border mt-10 grid max-w-lg grid-cols-2 gap-6 border-t pt-6">
             <div>
