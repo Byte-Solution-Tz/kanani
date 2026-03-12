@@ -55,9 +55,9 @@ export default function AboutPage() {
             <Link href="/products" className="btn-theme-primary rounded-full px-6 py-2.5 text-sm font-semibold">
               Explore Products
             </Link>
-            <Link href="/contact" className="btn-theme-blue rounded-full px-6 py-2.5 text-sm font-semibold">
+            {/* <Link href="/contact" className="btn-theme-blue rounded-full px-6 py-2.5 text-sm font-semibold">
               Contact Our Team
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
