@@ -132,6 +132,73 @@ export function CraneIcon({ className }: IconProps) {
   );
 }
 
+export function StarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path d="m12 3 2.4 6.3H21l-5.2 3.8 2 6.3-5.8-4.2-5.8 4.2 2-6.3L3 9.3h6.6L12 3Z" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+export function CheckCircleIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <circle cx="12" cy="12" r="8.5" strokeWidth="1.8" />
+      <path d="m8.7 12 2.2 2.2 4.4-4.4" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function LockOpenIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <rect x="4" y="10" width="16" height="10" rx="2" strokeWidth="1.8" />
+      <path d="M8 10V8.2A4.2 4.2 0 0 1 12.2 4H13a4 4 0 0 1 4 4" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+export function TrendingUpIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path d="m4 15 5-5 4 4 7-7" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 7h4v4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function TargetIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <circle cx="12" cy="12" r="8.5" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="5.2" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+      <path d="m14 10 7-7" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M19.6 2h1.9v1.9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function VisionIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path d="M12 3.5a5 5 0 0 0-5 5c0 2.8 1.9 4.3 3 5.5.7.8.8 1.2.8 2h2.4c0-.8.1-1.2.8-2 1.1-1.2 3-2.7 3-5.5a5 5 0 0 0-5-5Z" strokeWidth="1.8" />
+      <path d="M9.5 18h5M10 20h4" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 7v4M10.5 9.5h3" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function DiamondIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path d="m4 9 8-5 8 5-8 11L4 9Z" strokeWidth="1.8" />
+      <path d="M8 7h8M12 4v16" strokeWidth="1.8" />
+      <path d="m4 9 8 0 8 0" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
 export function PinIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>

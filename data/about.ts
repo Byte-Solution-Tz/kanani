@@ -1,9 +1,9 @@
-export type AboutCoreValueIcon = "truck" | "foundation" | "tools" | "building";
+export type AboutPillarIcon = "mission" | "vision" | "values";
 
-export type AboutCoreValue = {
+export type AboutPillar = {
   title: string;
   description: string;
-  icon: AboutCoreValueIcon;
+  icon: AboutPillarIcon;
 };
 
 export type MilestoneItem = {
@@ -13,30 +13,29 @@ export type MilestoneItem = {
   image: string;
 };
 
-export const aboutCoreValues: AboutCoreValue[] = [
+export const aboutWhoWeAreImage =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDDNzj-7PN4GH7yns-6TIn-b3U3mp5wL3e-B8z9Jj4nvnKKGKPMClBsbvds0wxIkk3fCgqPpz7JMlkZH9TbYct5b0gVQgjEqRSRx1z1R6Q9Sf-Y41RGNypo0maY6-KUjY8p1Hhbrp9p0y-kagjlDRokUrkFWWpIQpNfrtRZcOmIbY_ebJlhUZMBVtbA6SC-BZO1pMV1qGzulEL6HTQXQmXZFuGVBvGh9rBryhN3wEfgmWDyM2T3p3Tujv0bK-2JOETT9QDMPdc_FgGr";
+
+export const aboutServicePills = ["Cement Supply", "Structural Steel", "Site Hardware", "Bulk Orders"];
+
+export const aboutPillars: AboutPillar[] = [
   {
-    title: "Reliability First",
+    title: "Mission",
     description:
-      "We commit to consistent stock availability and dependable delivery windows for active projects.",
-    icon: "truck",
+      "Deliver dependable material supply with quality assurance, transparent communication, and on-time dispatch for active projects.",
+    icon: "mission",
   },
   {
-    title: "Integrity in Supply",
+    title: "Vision",
     description:
-      "We operate with transparent pricing, honest communication, and accountability in every order.",
-    icon: "foundation",
+      "Become East Africa's most trusted construction and industrial supply partner through disciplined execution and long-term customer value.",
+    icon: "vision",
   },
   {
-    title: "Quality & Safety",
+    title: "Values",
     description:
-      "We prioritize compliant materials and responsible handling to support safe, long-lasting outcomes.",
-    icon: "tools",
-  },
-  {
-    title: "Partnership Mindset",
-    description:
-      "We build long-term relationships with contractors, developers, and industrial buyers across East Africa.",
-    icon: "building",
+      "Reliability, quality, and accountability guide how we source, stock, and deliver every order.",
+    icon: "values",
   },
 ];
 
