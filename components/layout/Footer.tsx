@@ -1,10 +1,13 @@
-import { FoundationIcon, MailIcon, PhoneIcon, PinIcon, SocialDot } from "@/components/shared/icons";
+import Image from "next/image";
+import Link from "next/link";
+
+import { MailIcon, PhoneIcon, PinIcon, SocialDot } from "@/components/shared/icons";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 bg-[linear-gradient(145deg,#1f3f63_0%,#173857_55%,#123250_100%)] text-white">
+    <footer className="theme-section-brand relative mt-24 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative -top-12 z-10 rounded-[2.5rem] border border-white/10 bg-[#1a3a57] px-6 py-8 shadow-[0_18px_40px_rgba(4,20,43,0.32)] md:px-10">
+        <div className="relative -top-12 z-10 rounded-[2.5rem] border border-white/10 bg-[var(--kanani-brand-blue-strong)] px-6 py-8 shadow-[0_18px_40px_rgba(4,20,43,0.32)] md:px-10">
           <div className="grid gap-6 md:grid-cols-3 md:gap-4">
             <div className="flex items-center gap-4 border-white/10 md:border-r md:pr-8">
               <PinIcon className="h-11 w-11 text-white/90" />
@@ -34,12 +37,15 @@ export default function Footer() {
 
         <div className="-mt-2 grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="border-b border-white/10 pb-8 md:border-0 md:pr-8 lg:border-r lg:pb-0">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--kanani-brand-red)] text-white">
-                <FoundationIcon className="h-5 w-5" />
-              </div>
-              <p className="text-3xl font-extrabold">Kanani</p>
-            </div>
+            <Link href="/" aria-label="Kanan home" className="inline-flex items-center">
+              <Image
+                src="/images/kanan-nav.png"
+                alt="Kanan logo"
+                width={1013}
+                height={320}
+                className="h-16 w-auto object-contain sm:h-20"
+              />
+            </Link>
             <p className="mt-6 text-base leading-8 text-white/80">
               Reliable industrial supply partner for construction and infrastructure projects across
               East Africa.
@@ -73,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <p className="text-3xl font-semibold">Newsletter</p>
             <p className="mt-8 text-base leading-8 text-white/80">
               Subscribe for stock updates, price alerts, and project supply insights from Kanani
@@ -89,7 +95,7 @@ export default function Footer() {
                 <MailIcon className="h-8 w-8" />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col gap-3 border-t border-white/10 py-8 text-sm text-white/80 md:flex-row md:items-center md:justify-between">

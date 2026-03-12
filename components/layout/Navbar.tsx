@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -64,6 +65,22 @@ const productMenu = [
       },
     ],
   },
+  {
+    title: "Plastic Recycling",
+    href: "/products?category=plastic",
+    items: [
+      {
+        label: "Plastic Recycling - PP & PE Pellets",
+        href: "/products/plastic-recycling-pp-pe-pellets",
+      },
+      {
+        label: "Color-Sorted Plastic Pellets",
+        href: "/products/colored-plastic-pellets",
+      },
+      { label: "Black, Yellow & Green Streams", href: "/products?category=plastic" },
+      { label: "PP and PE Grade Supply", href: "/products?category=plastic" },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -73,15 +90,22 @@ export default function Navbar() {
   return (
     <header className="theme-header sticky top-0 z-50 border-b backdrop-blur">
       <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-black tracking-[0.12em] text-[var(--kanani-brand-blue)]">
-          KANANI
+        <Link href="/" aria-label="Kanan home" className="inline-flex items-center">
+          <Image
+            src="/images/kanan-nav.png"
+            alt="Kanan logo"
+            width={1013}
+            height={320}
+            priority
+            className="h-14 w-auto object-contain sm:h-16"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 text-xs font-semibold md:flex">
           <Link href="/" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             Home
           </Link>
-          <Link href="/#about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          <Link href="/about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
             About Us
           </Link>
           <div
@@ -102,9 +126,9 @@ export default function Navbar() {
             </Link>
 
             {isProductsOpen ? (
-              <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1100px)] -translate-x-1/2 pt-3">
+              <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1320px)] -translate-x-1/2 pt-3">
                 <div className="rounded border border-slate-200 bg-white p-7 shadow-[0_22px_55px_rgba(16,34,70,0.18)]">
-                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
                     {productMenu.map((section) => (
                       <div key={section.title}>
                         <Link
@@ -176,7 +200,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/#about"
+              href="/about"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm font-semibold text-[var(--kanani-text)]"
             >
