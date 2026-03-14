@@ -4,27 +4,27 @@ import { ArrowRightIcon, BoxesIcon, ToolsIcon, TruckIcon, WalletIcon } from "@/c
 
 const benefits = [
   {
-    title: "Company Profile",
+    title: "Reliable Material Sourcing",
     description:
-      "A reliable construction and industrial supply company focused on quality delivery and operational excellence.",
+      "We partner with trusted manufacturers and suppliers to ensure every material meets strict quality and durability standards for customers.",
     icon: TruckIcon,
   },
   {
-    title: "Company Culture",
+    title: "Efficient Supply & Logistics",
     description:
-      "We build long-term partnerships through transparency, consistency, and a client-first way of working.",
+      "Our logistics network ensures fast and dependable delivery, helping contractors and developers keep projects on schedule without material delays.",
     icon: WalletIcon,
   },
   {
-    title: "Research & Development",
+    title: "Quality Assurance",
     description:
-      "Our team continuously improves sourcing, quality control, and logistics efficiency to serve large projects better.",
+      "Every order goes through careful sourcing and verification to ensure the materials delivered meet project specifications and safety standards. ",
     icon: BoxesIcon,
   },
   {
-    title: "Regional Reach",
+    title: "Built for Large-Scale Projects",
     description:
-      "We support contractors, developers, and industrial buyers across Tanzania with dependable supply solutions.",
+      "We specialize in supporting large infrastructure and construction projects with consistent supply capacity and dependable service.",
     icon: ToolsIcon,
   },
 ];
@@ -41,7 +41,7 @@ export default function WhyChooseSection() {
           </div>
           <div className="lg:col-span-7">
             <p className="text-base leading-8 text-[var(--kanani-muted-strong)]">
-              Kanani Services delivers professional construction and industrial supply support with
+              Kanan Services delivers professional construction and industrial supply support with
               a strong focus on quality, consistency, and responsive customer service. We combine
               reliable sourcing, technical understanding, and logistics capability to keep projects
               moving without delays.
@@ -61,13 +61,13 @@ export default function WhyChooseSection() {
               </div>
               <h3 className="text-2xl font-semibold text-[var(--kanani-text)]">{benefit.title}</h3>
               <p className="mt-4 text-base leading-8 text-[var(--kanani-muted-strong)]">{benefit.description}</p>
-              <Link
+              {/* <Link
                 href="/about"
                 className="mt-7 inline-flex items-center gap-2 text-base font-medium text-[var(--kanani-muted-strong)] transition hover:text-[var(--kanani-brand-red)]"
               >
                 Read More
                 <ArrowRightIcon className="h-4 w-4 text-[var(--kanani-brand-gold)]" />
-              </Link>
+              </Link> */}
             </article>
           ))}
         </div>

@@ -14,7 +14,7 @@ export default function AboutSection() {
             className="theme-border h-full max-h-[430px] w-full rounded-lg border object-cover"
           />
           <div className="absolute -bottom-5 right-0 rounded bg-[var(--kanani-brand-blue)] px-7 py-5 shadow-lg shadow-black/20 sm:right-5">
-            <p className="text-3xl font-black text-white">15+</p>
+            <p className="text-3xl font-black text-white">14+</p>
             <p className="text-xs text-slate-200">Years of Experience</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function AboutSection() {
             Professional Supply Solutions for Large-Scale Projects
           </h2>
           <p className="theme-muted mt-6 max-w-xl">
-            Kanani Services Limited is a premier provider of essential construction material and
+            Kanan Services Limited is a premier provider of essential construction material and
             industrial supplies. We pride ourselves on being a reliable partner for large-scale
             developers and independent contractors alike.
           </p>
@@ -43,7 +43,7 @@ export default function AboutSection() {
             About Us
           </Link>
 
-          <div className="theme-border mt-10 grid max-w-lg grid-cols-2 gap-6 border-t pt-6">
+          {/* <div className="theme-border mt-10 grid max-w-lg grid-cols-2 gap-6 border-t pt-6">
             <div>
               <p className="text-3xl font-black">500+</p>
               <p className="theme-muted text-sm">Global Partners</p>
@@ -52,7 +52,7 @@ export default function AboutSection() {
               <p className="text-3xl font-black">24/7</p>
               <p className="theme-muted text-sm">Logistics Support</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

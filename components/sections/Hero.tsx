@@ -38,10 +38,10 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-20 lg:pt-16">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-100">
+            {/* <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-100">
               <FoundationIcon className="h-3.5 w-3.5" />
               Kanani Services Limited
-            </p>
+            </p> */}
 
             <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
               Trusted Partner for
@@ -64,13 +64,13 @@ export default function Hero() {
                 Explore Products
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
-              <Link
+              {/* <Link
                 href="/contact"
                 className="btn-theme-blue inline-flex items-center gap-2 rounded px-6 py-3 text-sm font-bold"
               >
                 Request a Quote
                 <ArrowRightIcon className="h-4 w-4" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
