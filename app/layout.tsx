@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kanani Services Limited",
+  title: "kanan Services Limited",
   description:
     "Trusted supplier of cement, steel, scrap and hardware for industrial and construction projects.",
 };

@@ -8,7 +8,7 @@ export default function CtaSection() {
           <div>
             <h2 className="text-2xl font-black sm:text-4xl">Need construction materials for your project?</h2>
             <p className="mt-2 text-sm text-blue-100">
-              Contact Kanani Services Limited today for a detailed quote and consulting.
+              Contact kanan Services Limited today for a detailed quote and consulting.
             </p>
           </div>
           <Link

@@ -24,10 +24,10 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-7 text-xs font-semibold md:flex">
-          <Link href="/" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          <Link href="/" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
             Home
           </Link>
-          <Link href="/about" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          <Link href="/about" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
             About Us
           </Link>
           <div
@@ -40,13 +40,13 @@ export default function Navbar() {
               onFocus={() => setIsProductsOpen(true)}
               className={`rounded px-3 py-2 transition ${
                 isProductsOpen
-                  ? "bg-[var(--kanani-brand-red)] text-white"
-                  : "hover:text-[var(--kanani-brand-gold-soft)]"
+                  ? "bg-[var(--kanan-brand-red)] text-white"
+                  : "hover:text-[var(--k                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -brand-gold-soft)]"
               }`}
             >
               Products
             </Link>
-
+                                                                                                               
             {isProductsOpen ? (
               <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1320px)] -translate-x-1/2 pt-3">
                 <div className="rounded border border-slate-200 bg-white p-7 shadow-[0_22px_55px_rgba(16,34,70,0.18)]">
@@ -56,7 +56,7 @@ export default function Navbar() {
                         <Link
                           href={section.href}
                           onClick={() => setIsProductsOpen(false)}
-                          className="text-xl font-semibold text-[var(--kanani-brand-red)]"
+                          className="text-xl font-semibold text-[var(--kanan-brand-red)]"
                         >
                           {section.title}
                         </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
                               <Link
                                 href={item.href}
                                 onClick={() => setIsProductsOpen(false)}
-                                className="text-sm text-[var(--kanani-muted-strong)] transition hover:text-[var(--kanani-brand-blue)]"
+                                className="text-sm text-[var(--kanan-muted-strong)] transition hover:text-[var(--kanan-brand-blue)]"
                               >
                                 {item.label}
                               </Link>
@@ -80,10 +80,12 @@ export default function Navbar() {
               </div>
             ) : null}
           </div>
-          <Link href="/#industries" className="transition hover:text-[var(--kanani-brand-gold-soft)]">
+          {/* <Link href="/#industries" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
             Industries
+          </Link> */}
+          <Link href="/careers" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
+            Careers
           </Link>
-          
         </nav>
 
         <div className="flex items-center gap-4">
@@ -98,7 +100,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((value) => !value)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded border border-[var(--kanani-line)] bg-white text-[var(--kanani-brand-blue)] md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded border border-[var(--kanan-line)] bg-white text-[var(--kanan-brand-blue)] md:hidden"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5">
               {isMenuOpen ? (
@@ -112,37 +114,43 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen ? (
-        <div className="border-t border-[var(--kanani-line)] bg-white md:hidden">
+        <div className="border-t border-[var(--kanan-line)] bg-white md:hidden">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6">
             <Link
               href="/"
               onClick={() => setIsMenuOpen(false)}
-              className="text-sm font-semibold text-[var(--kanani-text)]"
+              className="text-sm font-semibold text-[var(--kanan-text)]"
             >
               Home
             </Link>
             <Link
               href="/about"
               onClick={() => setIsMenuOpen(false)}
-              className="text-sm font-semibold text-[var(--kanani-text)]"
+              className="text-sm font-semibold text-[var(--kanan-text)]"
             >
               About Us
             </Link>
             <Link
               href="/products"
               onClick={() => setIsMenuOpen(false)}
-              className="text-sm font-semibold text-[var(--kanani-text)]"
+              className="text-sm font-semibold text-[var(--kanan-text)]"
             >
               Products
             </Link>
-            <Link
+            {/* <Link
               href="/#industries"
               onClick={() => setIsMenuOpen(false)}
-              className="text-sm font-semibold text-[var(--kanani-text)]"
+              className="text-sm font-semibold text-[var(--kanan-text)]"
             >
               Industries
+            </Link> */}
+            <Link
+              href="/careers"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-sm font-semibold text-[var(--kanan-text)]"
+            >
+              Careers
             </Link>
-            
             <Link
               href="/contact"
               onClick={() => setIsMenuOpen(false)}

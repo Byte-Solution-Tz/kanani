@@ -149,6 +149,14 @@ export function CheckCircleIcon({ className }: IconProps) {
   );
 }
 
+export function BadgeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
 export function LockOpenIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
@@ -199,11 +207,11 @@ export function DiamondIcon({ className }: IconProps) {
   );
 }
 
-export function PinIcon({ className }: IconProps) {
+export function MapPinIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
-      <path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z" strokeWidth="2" />
-      <circle cx="12" cy="10" r="2.5" strokeWidth="2" />
+      <path d="M12 2a8 8 0 0 1 8 8c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 8-8Z" strokeWidth="1.8" />
+      <circle cx="12" cy="10" r="2" fill="currentColor" />
     </svg>
   );
 }
@@ -213,5 +221,24 @@ export function SocialDot({ label }: { label: string }) {
     <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-white/20 px-1 text-xs font-bold lowercase text-white/90">
       {label}
     </span>
+  );
+}
+
+export function UsersIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 16 16" fill="none">
+      <circle cx="6" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M1 13c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="12" cy="5" r="2" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M14 13c0-1.86-1-3.5-2.5-4.3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function HeartIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 16 16" fill="none">
+      <path d="M8 13s-6-3.5-6-7a3.5 3.5 0 0 1 6-2.45A3.5 3.5 0 0 1 14 6c0 3.5-6 7-6 7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
   );
 }

@@ -72,7 +72,7 @@ export default function MilestonesSlider({ milestones, autoAdvanceMs = 4600 }: M
             >
               <div className="pb-7 text-center">
                 <p className="text-4xl font-black text-[#bf7474]">{milestone.year}</p>
-                <p className="mt-2 text-sm font-semibold text-[var(--kanani-muted-strong)]">{milestone.title}</p>
+                <p className="mt-2 text-sm font-semibold text-[var(--kanan-muted-strong)]">{milestone.title}</p>
                 <span className="mt-4 inline-flex h-7 w-7 items-center justify-center rounded-full border-[6px] border-[#bf7474] bg-white shadow-[0_0_0_4px_rgba(116,191,159,0.24)]" />
               </div>
 
@@ -88,7 +88,7 @@ export default function MilestonesSlider({ milestones, autoAdvanceMs = 4600 }: M
                     className="object-cover"
                   />
                 </div>
-                <p className="px-3 pb-4 pt-5 text-center text-base font-semibold leading-7 text-[var(--kanani-text)]">
+                <p className="px-3 pb-4 pt-5 text-center text-base font-semibold leading-7 text-[var(--kanan-text)]">
                   {milestone.caption}
                 </p>
               </div>

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { MailIcon, PhoneIcon, PinIcon, SocialDot } from "@/components/shared/icons";
+import { MailIcon, PhoneIcon, MapPinIcon as PinIcon, SocialDot } from "@/components/shared/icons";
 
 export default function Footer() {
   return (
     <footer className="theme-section-brand relative mt-24 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative -top-12 z-10 rounded-[2.5rem] border border-white/10 bg-[var(--kanani-brand-blue-strong)] px-6 py-8 shadow-[0_18px_40px_rgba(4,20,43,0.32)] md:px-10">
+        <div className="relative -top-12 z-10 rounded-[2.5rem] border border-white/10 bg-[var(--kanan-brand-blue-strong)] px-6 py-8 shadow-[0_18px_40px_rgba(4,20,43,0.32)] md:px-10">
           <div className="grid gap-6 md:grid-cols-3 md:gap-4">
             <div className="flex items-center gap-4 border-white/10 md:border-r md:pr-8">
               <PinIcon className="h-11 w-11 text-white/90" />
@@ -21,7 +21,7 @@ export default function Footer() {
               <MailIcon className="h-11 w-11 text-white/90" />
               <div>
                 <p className="text-xl font-bold leading-tight">Email:</p>
-                <p className="mt-2 text-base text-white/80">kanani.co.tz</p>
+                <p className="mt-2 text-base text-white/80">kanan.co.tz</p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* <div>
             <p className="text-3xl font-semibold">Newsletter</p>
             <p className="mt-8 text-base leading-8 text-white/80">
-              Subscribe for stock updates, price alerts, and project supply insights from Kanani
+              Subscribe for stock updates, price alerts, and project supply insights from kanan
               Services.
             </p>
             <div className="mt-8 flex items-center justify-between gap-4 rounded-lg border border-white/12 bg-white/10 px-5 py-4">
@@ -100,12 +100,12 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-white/10 py-8 text-sm text-white/80 md:flex-row md:items-center md:justify-between">
           <p>
-            Copyright © <span className="text-[var(--kanani-brand-red-soft)]">2026</span> | All
+            Copyright © <span className="text-[var(--kanan-brand-red-soft)]">2026</span> | All
             Rights Reserved.
           </p>
           <div className="flex items-center gap-5">
             <a href="#">Term and Service</a>
-            <span className="text-[var(--kanani-brand-red-soft)]">||</span>
+            <span className="text-[var(--kanan-brand-red-soft)]">||</span>
             <a href="#">Privacy Policy</a>
           </div>
         </div>

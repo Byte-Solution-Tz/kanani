@@ -18,7 +18,7 @@ export default function ProductCategories() {
       <div className="w-full">
         <div className="overflow-hidden border-y border-[#d8deea] bg-white">
           <div className="grid grid-cols-[112px_1fr] lg:grid-cols-[260px_1fr_1.35fr]">
-            <aside className="row-span-2 bg-[var(--kanani-brand-red)] py-6 text-white lg:row-span-1 lg:py-12">
+            <aside className="row-span-2 bg-[var(--kanan-brand-red)] py-6 text-white lg:row-span-1 lg:py-12">
               <ul>
                 {productCategoryItems.map((item) => {
                   const isActive = item.key === activeItem.key;
@@ -35,7 +35,7 @@ export default function ProductCategories() {
                       >
                         {item.title}
                         {isActive ? (
-                          <span className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rotate-45 bg-[var(--kanani-brand-red)]" />
+                          <span className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rotate-45 bg-[var(--kanan-brand-red)]" />
                         ) : null}
                       </Link>
                     </li>
@@ -45,8 +45,8 @@ export default function ProductCategories() {
             </aside>
 
             <div className="bg-[#f5f6f8] px-4 py-6 sm:px-6 sm:py-8 lg:col-start-2 lg:px-12 lg:py-16">
-              <p className="text-sm uppercase tracking-widest text-slate-500">Products</p>
-              <div className="mt-2 h-[2px] w-28 bg-[var(--kanani-brand-red)] sm:w-40" />
+              <p className="text-sm uppercase tracking-widest text-slate-500">Services</p>
+              <div className="mt-2 h-[2px] w-28 bg-[var(--kanan-brand-red)] sm:w-40" />
               <h2 className="mt-4 text-5xl font-bold tracking-tight text-slate-800 sm:text-6xl">
                 What can we offer
               </h2>
@@ -60,7 +60,7 @@ export default function ProductCategories() {
 
               <Link
                 href={`/products?category=${activeItem.key}`}
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-(--kanani-brand-blue) px-8 py-3 text-base font-medium text-white transition hover:brightness-110 sm:mt-10 sm:px-12 sm:py-4 sm:text-lg"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-(--kanan-brand-blue) px-8 py-3 text-base font-medium text-white transition hover:brightness-110 sm:mt-10 sm:px-12 sm:py-4 sm:text-lg"
               >
                 Browse {activeItem.title}
               </Link>
