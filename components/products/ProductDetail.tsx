@@ -15,15 +15,15 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     <main className="theme-shell min-h-screen">
       <Navbar />
 
-      <section className="border-b border-[var(--kanani-line)] bg-white px-4 py-5 sm:px-6 lg:px-8">
+      <section className="border-b border-[var(--kanan-line)] bg-white px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <nav className="flex items-center gap-2 text-sm text-[var(--kanani-muted)]">
+          <nav className="flex items-center gap-2 text-sm text-[var(--kanan-muted)]">
             {product.breadcrumbs.map((crumb, index) => {
               const isLast = index === product.breadcrumbs.length - 1;
               return (
                 <div key={crumb} className="flex items-center gap-2">
                   {index > 0 ? <ChevronRightIcon className="h-3 w-3 text-slate-400" /> : null}
-                  <span className={isLast ? "font-semibold text-[var(--kanani-brand-blue)]" : ""}>{crumb}</span>
+                  <span className={isLast ? "font-semibold text-[var(--kanan-brand-blue)]" : ""}>{crumb}</span>
                 </div>
               );
             })}
@@ -34,7 +34,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-8">
-            <div className="relative aspect-video overflow-hidden rounded-2xl border border-[var(--kanani-line)] bg-slate-100 shadow-[var(--kanani-shadow-soft)]">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-[var(--kanan-line)] bg-slate-100 shadow-[var(--kanan-shadow-soft)]">
               <Image
                 src={product.heroImage}
                 alt={product.title}
@@ -42,12 +42,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover"
               />
-              <span className="absolute left-4 top-4 rounded bg-[var(--kanani-brand-red)] px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white">
+              <span className="absolute left-4 top-4 rounded bg-[var(--kanan-brand-red)] px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white">
                 {product.badge}
               </span>
             </div>
 
-            <h1 className="mt-6 text-4xl font-black tracking-tight text-[var(--kanani-text)] sm:text-5xl">
+            <h1 className="mt-6 text-4xl font-black tracking-tight text-[var(--kanan-text)] sm:text-5xl">
               {product.title}
             </h1>
             <p className="theme-muted mt-4 max-w-3xl text-lg leading-relaxed">{product.summary}</p>
@@ -69,9 +69,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </button>
             </div>
 
-            <div className="mt-10 space-y-10 border-t border-[var(--kanani-line)] pt-10">
+            <div className="mt-10 space-y-10 border-t border-[var(--kanan-line)] pt-10">
               <section>
-                <SectionHeading colorClass="bg-[var(--kanani-brand-gold)]" title="Product Overview" />
+                <SectionHeading colorClass="bg-[var(--kanan-brand-gold)]" title="Product Overview" />
                 <p className="theme-muted mt-4 leading-relaxed">{product.overview}</p>
                 <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                   {product.features.map((feature) => (
@@ -81,14 +81,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </section>
 
               <section>
-                <SectionHeading colorClass="bg-[var(--kanani-brand-red)]" title="Key Details" />
+                <SectionHeading colorClass="bg-[var(--kanan-brand-red)]" title="Key Details" />
                 <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {product.applications.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-3 rounded-xl border border-[var(--kanani-line)] bg-white px-4 py-3 text-[var(--kanani-muted-strong)]"
+                      className="flex items-center gap-3 rounded-xl border border-[var(--kanan-line)] bg-white px-4 py-3 text-[var(--kanan-muted-strong)]"
                     >
-                      <span className="h-2 w-2 rounded-full bg-[var(--kanani-brand-red-soft)]" />
+                      <span className="h-2 w-2 rounded-full bg-[var(--kanan-brand-red-soft)]" />
                       {item}
                     </li>
                   ))}
@@ -96,20 +96,20 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </section>
 
               <section>
-                <SectionHeading colorClass="bg-[var(--kanani-brand-blue-strong)]" title="Technical Specifications" />
-                <div className="mt-6 overflow-hidden rounded-xl border border-[var(--kanani-line)] bg-white">
+                <SectionHeading colorClass="bg-[var(--kanan-brand-blue-strong)]" title="Technical Specifications" />
+                <div className="mt-6 overflow-hidden rounded-xl border border-[var(--kanan-line)] bg-white">
                   <table className="w-full text-left text-sm">
-                    <thead className="bg-[var(--kanani-brand-blue)] text-xs uppercase tracking-wider text-white">
+                    <thead className="bg-[var(--kanan-brand-blue)] text-xs uppercase tracking-wider text-white">
                       <tr>
                         <th className="px-6 py-4">Property</th>
                         <th className="px-6 py-4">Standard Range</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[var(--kanani-line)]">
+                    <tbody className="divide-y divide-[var(--kanan-line)]">
                       {product.specifications.map((spec, index) => (
-                        <tr key={spec.property} className={index % 2 === 1 ? "bg-[var(--kanani-bg-soft)]/60" : ""}>
-                          <td className="px-6 py-4 font-semibold text-[var(--kanani-text)]">{spec.property}</td>
-                          <td className="px-6 py-4 text-[var(--kanani-muted-strong)]">{spec.value}</td>
+                        <tr key={spec.property} className={index % 2 === 1 ? "bg-[var(--kanan-bg-soft)]/60" : ""}>
+                          <td className="px-6 py-4 font-semibold text-[var(--kanan-text)]">{spec.property}</td>
+                          <td className="px-6 py-4 text-[var(--kanan-muted-strong)]">{spec.value}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -120,8 +120,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <aside className="space-y-6 lg:col-span-4">
-            <div className="theme-panel rounded-2xl border border-[var(--kanani-line)] p-6">
-              <h4 className="inline-block border-b border-[var(--kanani-brand-gold)] pb-2 text-sm font-bold uppercase tracking-widest text-[var(--kanani-text)]">
+            <div className="theme-panel rounded-2xl border border-[var(--kanan-line)] p-6">
+              <h4 className="inline-block border-b border-[var(--kanan-brand-gold)] pb-2 text-sm font-bold uppercase tracking-widest text-[var(--kanan-text)]">
                 Resources
               </h4>
               <div className="mt-4 space-y-3">
@@ -131,7 +131,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </div>
             </div>
 
-            <div className="theme-section-brand relative overflow-hidden rounded-2xl p-7 shadow-[var(--kanani-shadow-soft)]">
+            <div className="theme-section-brand relative overflow-hidden rounded-2xl p-7 shadow-[var(--kanan-shadow-soft)]">
               <h4 className="text-3xl font-black leading-tight text-white">Ready for a volume order?</h4>
               <p className="mt-4 text-sm leading-relaxed text-blue-100">
                 Connect with our logistics team for bulk pricing, shipping timelines, and custom
@@ -146,22 +146,22 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </Link>
               <div className="mt-5 border-t border-white/20 pt-4 text-sm text-white">
                 <p className="mb-2 flex items-center gap-2">
-                  <PhoneMiniIcon className="h-4 w-4 text-[var(--kanani-brand-gold-soft)]" />
+                  <PhoneMiniIcon className="h-4 w-4 text-[var(--kanan-brand-gold-soft)]" />
                   +255 745 120 612
                 </p>
                 <p className="flex items-center gap-2">
-                  <ClockIcon className="h-4 w-4 text-[var(--kanani-brand-gold-soft)]" />
+                  <ClockIcon className="h-4 w-4 text-[var(--kanan-brand-gold-soft)]" />
                   Mon-Fri: 8:00 AM - 6:00 PM
                 </p>
               </div>
             </div>
 
-            <div className="theme-panel rounded-2xl border border-[var(--kanani-line)] p-6">
-              <h5 className="mb-2 flex items-center gap-2 font-bold text-[var(--kanani-text)]">
-                <TruckMiniIcon className="h-4 w-4 text-[var(--kanani-brand-red-soft)]" />
+            <div className="theme-panel rounded-2xl border border-[var(--kanan-line)] p-6">
+              <h5 className="mb-2 flex items-center gap-2 font-bold text-[var(--kanan-text)]">
+                <TruckMiniIcon className="h-4 w-4 text-[var(--kanan-brand-red-soft)]" />
                 Global Logistics
               </h5>
-              <p className="text-xs leading-relaxed text-[var(--kanani-muted-strong)]">
+              <p className="text-xs leading-relaxed text-[var(--kanan-muted-strong)]">
                 We offer multi-modal transport including containerized sea freight, rail, and heavy
                 truck delivery for domestic clients.
               </p>
@@ -181,7 +181,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
 function SectionHeading({ title, colorClass }: { title: string; colorClass: string }) {
   return (
-    <h3 className="flex items-center gap-3 text-3xl font-bold text-[var(--kanani-text)]">
+    <h3 className="flex items-center gap-3 text-3xl font-bold text-[var(--kanan-text)]">
       <span className={`h-8 w-1.5 rounded-full ${colorClass}`} />
       {title}
     </h3>
@@ -190,13 +190,13 @@ function SectionHeading({ title, colorClass }: { title: string; colorClass: stri
 
 function FeatureCard({ feature }: { feature: ProductFeature }) {
   return (
-    <div className="theme-panel flex items-start gap-4 rounded-xl border border-[var(--kanani-line)] p-4">
-      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--kanani-brand-red)] text-[11px] font-black uppercase text-white">
+    <div className="theme-panel flex items-start gap-4 rounded-xl border border-[var(--kanan-line)] p-4">
+      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--kanan-brand-red)] text-[11px] font-black uppercase text-white">
         {feature.icon === "verified" ? "V" : "E"}
       </span>
       <div>
-        <h4 className="font-bold text-[var(--kanani-text)]">{feature.title}</h4>
-        <p className="text-sm text-[var(--kanani-muted)]">{feature.description}</p>
+        <h4 className="font-bold text-[var(--kanan-text)]">{feature.title}</h4>
+        <p className="text-sm text-[var(--kanan-muted)]">{feature.description}</p>
       </div>
     </div>
   );
@@ -204,15 +204,15 @@ function FeatureCard({ feature }: { feature: ProductFeature }) {
 
 function ResourceCard({ resource }: { resource: ProductResource }) {
   const kindStyles: Record<ProductResource["kind"], string> = {
-    pdf: "bg-[var(--kanani-brand-red)] text-white",
-    sheet: "bg-[var(--kanani-brand-gold)] text-[#122445]",
-    spec: "bg-[var(--kanani-brand-blue)] text-white",
+    pdf: "bg-[var(--kanan-brand-red)] text-white",
+    sheet: "bg-[var(--kanan-brand-gold)] text-[#122445]",
+    spec: "bg-[var(--kanan-brand-blue)] text-white",
   };
 
   return (
     <a
       href="#"
-      className="group flex items-center justify-between rounded-lg border border-[var(--kanani-line)] bg-white p-4 transition hover:border-[var(--kanani-brand-red-soft)]"
+      className="group flex items-center justify-between rounded-lg border border-[var(--kanan-line)] bg-white p-4 transition hover:border-[var(--kanan-brand-red-soft)]"
     >
       <div className="flex items-center gap-3">
         <span
@@ -221,11 +221,11 @@ function ResourceCard({ resource }: { resource: ProductResource }) {
           {resource.kind === "pdf" ? "PDF" : resource.kind === "sheet" ? "SDS" : "SPEC"}
         </span>
         <div>
-          <p className="text-sm font-bold text-[var(--kanani-text)]">{resource.title}</p>
-          <p className="text-xs text-[var(--kanani-muted)]">{resource.size}</p>
+          <p className="text-sm font-bold text-[var(--kanan-text)]">{resource.title}</p>
+          <p className="text-xs text-[var(--kanan-muted)]">{resource.size}</p>
         </div>
       </div>
-      <DownloadIcon className="h-4 w-4 text-[var(--kanani-muted)] transition group-hover:text-[var(--kanani-brand-red-soft)]" />
+      <DownloadIcon className="h-4 w-4 text-[var(--kanan-muted)]" />
     </a>
   );
 }

@@ -56,20 +56,18 @@ export function isProductCategory(value: string): value is ProductCategoryId {
   return productCategoryIds.includes(value as ProductCategoryId);
 }
 
-const imageScrapSteel =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBXCIN_i77zC2-U6_pSxIX_jIWnn5zQqABlqV7w_8UdcWw2HXLMDe2a73D8Or-2IRYkJRC6GHrUY4t-WFreb6bUseOi39Hr67iCRZcklQs2a9qmcTxvjqHCOWNE--m4YeRYtYclINCrZOgke0LkpP82FyVa-g4bIgCvUBnU8HWYCpnpIR5KV1OPfDeTxPMESDdq0t2KHFHyZfWwcqVbnKVte3zgl0ASGW_u-KQ5A7SHn5aGLsB5NePe93gP1aomVcVG4gbBizeHxnWI";
-const imageScrapCast =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuC3PZYE8vS1VsCZESjsBmRxj9AgcIH2WNiCgJJypcSY4xyw4sCwl3__lF3kQYXcBE4VOJZmN7FdR7vvfnSl2vsRbKOPYkt2xmmF5A7GaJajUGVSX_dZTZ1XwcqMTeS9sbE_RByQNREFn8s5Cej4AfEuVj795vrTvZLxbX0bCwk3bkrqu2C0prDiUf0hLValAGimB_jqWHXgzsadM-9Y8Y31N6oduqpxVPOc-ShM6oN_kDAPBiX6NliQphyhrnMD4KReh5bkaStNuY7N";
-const imageScrapProcessing =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAsEtlepplJ6mw_D9ug1ecMZ0ky9FKF7P69nu6JCPeAsN0aWUCXe7C2jA_xpBll6ZQzmeNmBxFq7jGWSNTDuYY_SfhNMlqE6KtxLohM-1ulZKjgE4w6TWmtr6d5ePukAcIYpKI5h-NlNm2r-gZAy29QXuYoaup6Ie10Yb28RZYDewkQ1Qn7NkZm9FveGe4W-2jkVPnwg-ioRyA7nLlt5nA5UtT-btUOHWORQzMJRjd6VHDc4OfNd-tHzgVghVqRxVi2Ni71DU5KzSZt";
-const imageSteel =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDjvAn9SbafEwGUsve5C8c_aSCYGWPeuQlttatT-Jm70yjBqxyk6MSUam91zGe5UNbgLKcVB4WbouGDjYjJyhCgllssvQC1H51yCqldsUcBug5pclS7JeIzAr7SOepz05taYzGpzP36-5uN8hSr40a-eCpS5e-ztiA6QspO9ntwFMYpgzPIwjS23VYcTvwx3e6NjQ_VTyqwaiOFKMpbUg7oyv23NotfSCXvQXJN2zo8Q00eS7S6jjHHolsU-RaCMXcwxtDvQd6cjuLj";
-const imageCement =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuD7ahCr8hFHGKBMe7VLmP2oKg7gBdEM1lo2fQr7FxD0WktDO9498N1xGRAMHbQb-rPAL0HzcZTCJ3d2PQzzz0qN1erPJh6bC608p2EPk0a3iNEd5wUEjaAu-S9bSExOktHSRo-6F1m9xuzgTewkO0u8e5b57vbI586oMpvbQLwep500w6PqG9aUdncCRf1mQrKf2kUp5uoQ9MZKGrpJh0L7CmvDjNzWjevJiHWsTYXk_wsXsarSmrhSxHLNux8PuHzzYmekvk9S9hao";
-const imageHardware =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCz8Tddr83Lrz8iEd5qRFd_HPiHMLwGa1YXbt6vSCsjNZprNlJu_BVsZx1-DifX-q8OnrWJKJTg10yasEdoOam0siHjJO_s2XlPIwLZd6QGI4e3aG_yRWW2e0Il54UdTm-QZDClkx2yhv_Ais0NV-hTrSfUsu4hMift0OYNRRXJqdJvBYS-W5p7AeELYDpTHq0fGWSeVwnxwd5I2JlLm4TdF5M89VVjaeExcXg0k7UNVtVSMaSVi8Bf_D9hHKxhgUzEVitRNy3CW212";
-const imagePlastic =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAsEtlepplJ6mw_D9ug1ecMZ0ky9FKF7P69nu6JCPeAsN0aWUCXe7C2jA_xpBll6ZQzmeNmBxFq7jGWSNTDuYY_SfhNMlqE6KtxLohM-1ulZKjgE4w6TWmtr6d5ePukAcIYpKI5h-NlNm2r-gZAy29QXuYoaup6Ie10Yb28RZYDewkQ1Qn7NkZm9FveGe4W-2jkVPnwg-ioRyA7nLlt5nA5UtT-btUOHWORQzMJRjd6VHDc4OfNd-tHzgVghVqRxVi2Ni71DU5KzSZt";
+const imageHeavyMeltingScrap = "/images/products/scrap/heavy_melting_scrap.webp";
+const imageCastIronScrap = "/images/products/scrap/cast_iron_scrap.webp";
+const imageSteelRebars = "/images/products/steel/steel_rebars.jpeg";
+const imageSteelSheets = "/images/products/steel/steel_sheet.webp";
+const imageSteelBeems = "/images/products/steel/steel_beem.webp";
+const imageDangoteCement = "/images/products/cement/dangote_cement.webp";
+const imageConstructionWood = "/images/products/hardware/construction_wood.jpg";
+const imageMarineBoards = "/images/products/hardware/marine_boards.jpg";
+const imageGypsumBoards = "/images/products/hardware/gypsum_boards.jpeg";
+const imageRoofingMaterials = "/images/products/hardware/roofing_material.webp";
+const imagePlasticRecyclingPP = "/images/products/plastic_recycling/plastic_recycling_pp.webp";
+const imagePlasticRecyclingPE = "/images/products/plastic_recycling/plastic_recycling_pe.jpg";
 
 export const products: CatalogProduct[] = [
   {
@@ -77,7 +75,7 @@ export const products: CatalogProduct[] = [
     slug: "heavy-melting-scrap-hms",
     name: "Heavy Melting Scrap (HMS)",
     category: "scrap",
-    image: imageScrapSteel,
+    image: imageHeavyMeltingScrap,
     description:
       "Bulk industrial ferrous scrap supplied to foundries, recyclers, and steel melting facilities.",
     spec: "HMS 1 & 2, sorted and furnace-ready",
@@ -93,7 +91,7 @@ export const products: CatalogProduct[] = [
     slug: "cast-iron-structural-scrap",
     name: "Cast Iron & Structural Scrap",
     category: "scrap",
-    image: imageScrapCast,
+    image: imageCastIronScrap,
     description:
       "Consistent cast iron and structural cut-off scrap streams for industrial recycling operations.",
     spec: "Segregated cast iron and structural mixed loads",
@@ -105,43 +103,11 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
-    id: "reliable-scrap-metal-purchasing",
-    slug: "reliable-scrap-metal-purchasing",
-    name: "Reliable Scrap Metal Purchasing",
-    category: "scrap",
-    image: imageScrapSteel,
-    description:
-      "Professional scrap purchasing with transparent weighing, fair pricing, and prompt settlement.",
-    spec: "Factory and site collection with verified weights",
-    posterHighlights: [
-      "Transparent weighing process",
-      "Competitive market-based buying rates",
-      "Pickup from industrial and project sites",
-      "Long-term supplier partnerships",
-    ],
-  },
-  {
-    id: "efficient-scrap-processing",
-    slug: "efficient-scrap-processing",
-    name: "Efficient Scrap Processing",
-    category: "scrap",
-    image: imageScrapProcessing,
-    description:
-      "Sorting, cutting, and contaminant reduction services to prepare scrap for downstream processing.",
-    spec: "Segregation, cutting, and clean dispatch preparation",
-    posterHighlights: [
-      "Efficient scrap processing workflows",
-      "Contaminant and non-metal separation",
-      "Grade-based sorting and preparation",
-      "Ready-to-ship processed material",
-    ],
-  },
-  {
     id: "tmt-bars-reinforcement-steel",
     slug: "tmt-bars-reinforcement-steel",
     name: "TMT Bars & Reinforcement Steel",
     category: "steel",
-    image: imageSteel,
+    image: imageSteelRebars,
     description:
       "High-strength steel bars for concrete reinforcement in residential, commercial, and civil works.",
     spec: "Reinforcement bars and rebar bundles",
@@ -157,7 +123,7 @@ export const products: CatalogProduct[] = [
     slug: "iron-sheets-mabati-roofing-materials",
     name: "Iron Sheets (Mabati) & Roofing Materials",
     category: "steel",
-    image: imageSteel,
+    image: imageSteelSheets,
     description:
       "Durable iron sheets and roofing products for industrial, commercial, and residential developments.",
     spec: "Mabati sheets, roofing profiles, accessories",
@@ -173,7 +139,7 @@ export const products: CatalogProduct[] = [
     slug: "structural-steel-beams-sections",
     name: "Structural Steel, Beams & Sections",
     category: "steel",
-    image: imageSteel,
+    image: imageSteelBeems,
     description:
       "Structural sections and steel beams for fabrication, frame works, and heavy load-bearing projects.",
     spec: "Beams, channels, angles, and sections",
@@ -189,7 +155,7 @@ export const products: CatalogProduct[] = [
     slug: "dangote-cement-authorized-distributor",
     name: "Dangote Cement (Authorized Distributor)",
     category: "cement",
-    image: imageCement,
+    image: imageDangoteCement,
     description:
       "Authorized Dangote cement distribution for contractors, developers, and major construction projects.",
     spec: "Certified Dangote cement supply channel",
@@ -201,59 +167,11 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
-    id: "bulk-bagged-cement-supply",
-    slug: "bulk-bagged-cement-supply",
-    name: "Bulk & Bagged Cement Supply",
-    category: "cement",
-    image: imageCement,
-    description:
-      "Flexible cement supply in bulk and bagged formats to fit project scale, timing, and logistics.",
-    spec: "Bulk tanker and bagged pallet dispatch",
-    posterHighlights: [
-      "Bulk and bagged cement formats",
-      "Scheduled supply for active sites",
-      "Consistent stock planning support",
-      "Suitable for small and mega projects",
-    ],
-  },
-  {
-    id: "secure-warehouse-cement-stock",
-    slug: "secure-warehouse-cement-stock",
-    name: "Large Inventory in Secure Warehouses",
-    category: "cement",
-    image: imageCement,
-    description:
-      "High-volume warehouse stocking to reduce shortages and maintain consistent project continuity.",
-    spec: "Protected storage and inventory-controlled dispatch",
-    posterHighlights: [
-      "Large inventory in secure warehouses",
-      "Moisture-protected storage management",
-      "Fast allocation for urgent orders",
-      "Reliable availability planning",
-    ],
-  },
-  {
-    id: "fast-reliable-cement-delivery",
-    slug: "fast-reliable-cement-delivery",
-    name: "Fast & Reliable Delivery",
-    category: "cement",
-    image: imageCement,
-    description:
-      "Dedicated cement logistics support for on-time site delivery across Dar es Salaam and nearby regions.",
-    spec: "Planned dispatch windows and dependable logistics",
-    posterHighlights: [
-      "Fast and reliable delivery",
-      "Route-planned distribution support",
-      "Bulk and bagged shipment handling",
-      "Project schedule alignment",
-    ],
-  },
-  {
     id: "timber-construction-wood",
     slug: "timber-construction-wood",
     name: "Timber & Construction Wood",
     category: "hardware",
-    image: imageHardware,
+    image: imageConstructionWood,
     description:
       "Timber and construction wood products for formwork, finishing, and general site applications.",
     spec: "Construction wood and timber sections",
@@ -265,19 +183,38 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
-    id: "marine-gypsum-boards",
-    slug: "marine-gypsum-boards",
-    name: "Marine & Gypsum Boards",
+    id: "marine-boards",
+    slug: "marine-boards",
+    name: "Marine Boards",
     category: "hardware",
-    image: imageHardware,
+    image: imageMarineBoards,
     description:
-      "Quality boards for interior partitions, ceilings, and moisture-sensitive construction areas.",
-    spec: "Marine board and gypsum board variants",
+      "Durable marine-grade boards suitable for interior applications, partitions, ceilings, and finishing works.",
+    spec: "Marine board board variants",
     posterHighlights: [
-      "Marine & Gypsum Boards",
-      "Interior and partition applications",
-      "Ceiling and finishing suitability",
+      "Marine Boards",
+      "Marine-grade durability",
+      "Interior and finishing applications",
       "Project-ready board stock",
+
+    ],
+  },
+  {
+    id: "gypsum-boards",
+    slug: "gypsum-boards",
+    name: "Gypsum Boards",
+    category: "hardware",
+    image: imageGypsumBoards,
+    description:
+      "Quality gypsum boards for interior partitioning, ceiling applications, and finishing works in construction projects.",
+    spec: "Gypsum board board variants",
+    posterHighlights: [
+      "Gypsum Boards",
+      "Interior partitioning and ceiling solutions",
+      "Reliable quality and stock availability",
+      "Suitable for residential and commercial projects",
+      "Project-ready board stock",
+
     ],
   },
   {
@@ -285,7 +222,7 @@ export const products: CatalogProduct[] = [
     slug: "roofing-finishing-materials",
     name: "Roofing & Finishing Materials",
     category: "hardware",
-    image: imageHardware,
+    image: imageRoofingMaterials,
     description:
       "Essential roofing and finishing products for structural completion and final project handover quality.",
     spec: "Roofing accessories and finishing materials",
@@ -297,51 +234,35 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
-    id: "complete-range-building-hardware",
-    slug: "complete-range-building-hardware",
-    name: "Complete Range of Building Hardware",
-    category: "hardware",
-    image: imageHardware,
+    id: "plastic-recycling-pp",
+    slug: "plastic-recycling-pp",
+    name: "Plastic Recycling Polypropalane (PP) Pellets",
+    category: "plastic",
+    image: imagePlasticRecyclingPP,
     description:
-      "Comprehensive hardware range covering essential fasteners, tools, fittings, and construction accessories.",
-    spec: "General building hardware supply",
+      "Recycled polypropylene (PP) pellets supplied by polymer type or by color stream including black, yellow, and green.",
+    spec: "Recycled polypropylene (PP) pellets",
     posterHighlights: [
-      "Complete range of building hardware",
-      "Reliable supply for structural works",
-      "Materials for finishing works",
-      "One-stop procurement support",
+      "Plastic Recycling - PP Pellets",
+      "Color-Sorted Plastic Pellets",
+      "Black, yellow, and green pellet supply",
+      "PP grade-based dispatch",
     ],
   },
   {
-    id: "plastic-recycling-pp-pe-pellets",
-    slug: "plastic-recycling-pp-pe-pellets",
-    name: "Plastic Recycling - PP & PE Pellets",
+    id: "plastic-recycling-pe",
+    slug: "plastic-recycling-pe",
+    name: "Plastic Recycling Polyethylene (PE) Pellets",
     category: "plastic",
-    image: imagePlastic,
+    image: imagePlasticRecyclingPE,
     description:
-      "Recycled polypropylene (PP) and polyethylene (PE) pellets supplied for extrusion, molding, and industrial reuse.",
-    spec: "Reprocessed PP and PE pellet grades",
+      "Recycled polyethylene (PE) pellets supplied by polymer type or by color stream including black, yellow, and green.",
+    spec: "Recycled polyethylene (PE) pellets",
     posterHighlights: [
-      "PP and PE recycled pellets",
-      "Industrial-grade recycled feedstock",
-      "Available in sorted and blended batches",
-      "Consistent moisture and contamination control",
-    ],
-  },
-  {
-    id: "colored-plastic-pellets",
-    slug: "colored-plastic-pellets",
-    name: "Color-Sorted Plastic Pellets",
-    category: "plastic",
-    image: imagePlastic,
-    description:
-      "Plastic pellets sold by color stream including black, yellow, and green for production-specific blending requirements.",
-    spec: "Black, yellow, and green pellet options",
-    posterHighlights: [
-      "Color-based pellet supply",
-      "Black, yellow, and green options",
-      "Batch consistency for production runs",
-      "Flexible bulk dispatch planning",
+      "Plastic Recycling - PE Pellets",
+      "Color-Sorted Plastic Pellets",
+      "Black, yellow, and green pellet supply",
+      "PE grade-based dispatch",
     ],
   },
 ];
@@ -461,7 +382,7 @@ function getRelatedProducts(item: CatalogProduct): RelatedProduct[] {
 function buildOverview(item: CatalogProduct): string {
   const highlightLine = item.posterHighlights.slice(0, 4).join(", ");
   return (
-    `${item.name} is supplied by Kanani Services Limited to support contractors, developers, ` +
+    `${item.name} is supplied by Kanan Services Limited to support contractors, developers, ` +
     `and industrial buyers with reliable stock, fair pricing, and on-time delivery. ` +
     `Key supply focus includes ${highlightLine}.`
   );
@@ -493,11 +414,11 @@ const heavyMeltingScrapDetail: ProductDetailEntry = {
   title: "Heavy Melting Scrap (HMS)",
   breadcrumbs: ["Catalog", "Scrap Materials", "Heavy Melting Scrap (HMS)"],
   badge: "Featured",
-  heroImage: imageScrapSteel,
+  heroImage: imageHeavyMeltingScrap,
   summary:
     "Bulk heavy melting scrap supplied to foundries, recyclers, and manufacturing plants with consistent quality and efficient logistics support.",
   overview:
-    "Kanani Services Limited provides reliable HMS supply alongside cast iron and structural scrap streams. From procurement to processing, our team supports industrial buyers with transparent sourcing, quality sorting, and dependable dispatch schedules.",
+    "Kanan Services Limited provides reliable HMS supply alongside cast iron and structural scrap streams. From procurement to processing, our team supports industrial buyers with transparent sourcing, quality sorting, and dependable dispatch schedules.",
   features: defaultFeatures,
   applications: categoryApplications.scrap,
   specifications: [

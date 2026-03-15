@@ -36,11 +36,11 @@ export default function WhyChooseSection() {
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <p className="text-sm uppercase tracking-wide text-slate-500">Company Profile</p>
-            <div className="mt-3 h-1 w-48 bg-[var(--kanani-brand-red)]" />
-            <h2 className="mt-4 text-4xl font-black text-[var(--kanani-text)] sm:text-5xl">Why Choose Us</h2>
+            <div className="mt-3 h-1 w-48 bg-[var(--kanan-brand-red)]" />
+            <h2 className="mt-4 text-4xl font-black text-[var(--kanan-text)] sm:text-5xl">Why Choose Us</h2>
           </div>
           <div className="lg:col-span-7">
-            <p className="text-base leading-8 text-[var(--kanani-muted-strong)]">
+            <p className="text-base leading-8 text-[var(--kanan-muted-strong)]">
               Kanan Services delivers professional construction and industrial supply support with
               a strong focus on quality, consistency, and responsive customer service. We combine
               reliable sourcing, technical understanding, and logistics capability to keep projects
@@ -56,17 +56,17 @@ export default function WhyChooseSection() {
               className="relative border border-white/70 bg-white px-7 py-8 shadow-[0_10px_24px_rgba(16,34,70,0.06)]"
             >
               <span className="absolute left-5 top-5 h-12 w-12 rounded-full bg-[rgba(227,31,47,0.15)]" />
-              <div className="relative mb-6 flex h-12 w-12 items-center justify-center text-[var(--kanani-brand-red)]">
+              <div className="relative mb-6 flex h-12 w-12 items-center justify-center text-[var(--kanan-brand-red)]">
                 <benefit.icon className="h-9 w-9" />
               </div>
-              <h3 className="text-2xl font-semibold text-[var(--kanani-text)]">{benefit.title}</h3>
-              <p className="mt-4 text-base leading-8 text-[var(--kanani-muted-strong)]">{benefit.description}</p>
+              <h3 className="text-2xl font-semibold text-[var(--kanan-text)]">{benefit.title}</h3>
+              <p className="mt-4 text-base leading-8 text-[var(--kanan-muted-strong)]">{benefit.description}</p>
               {/* <Link
                 href="/about"
-                className="mt-7 inline-flex items-center gap-2 text-base font-medium text-[var(--kanani-muted-strong)] transition hover:text-[var(--kanani-brand-red)]"
+                className="mt-7 inline-flex items-center gap-2 text-base font-medium text-[var(--kanan-muted-strong)] transition hover:text-[var(--kanan-brand-red)]"
               >
                 Read More
-                <ArrowRightIcon className="h-4 w-4 text-[var(--kanani-brand-gold)]" />
+                <ArrowRightIcon className="h-4 w-4 text-[var(--kanan-brand-gold)]" />
               </Link> */}
             </article>
           ))}

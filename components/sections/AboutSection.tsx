@@ -13,7 +13,7 @@ export default function AboutSection() {
             height={600}
             className="theme-border h-full max-h-[430px] w-full rounded-lg border object-cover"
           />
-          <div className="absolute -bottom-5 right-0 rounded bg-[var(--kanani-brand-blue)] px-7 py-5 shadow-lg shadow-black/20 sm:right-5">
+          <div className="absolute -bottom-5 right-0 rounded bg-[var(--kanan-brand-blue)] px-7 py-5 shadow-lg shadow-black/20 sm:right-5">
             <p className="text-3xl font-black text-white">14+</p>
             <p className="text-xs text-slate-200">Years of Experience</p>
           </div>
@@ -21,7 +21,7 @@ export default function AboutSection() {
 
         <div>
           <p className="text-sm uppercase tracking-widest text-slate-500">Who We Are</p>
-          <div className="mt-2 h-[2px] w-28 bg-[var(--kanani-brand-red)] sm:w-40" />
+          <div className="mt-2 h-[2px] w-28 bg-[var(--kanan-brand-red)] sm:w-40" />
           <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
             Professional Supply Solutions for Large-Scale Projects
           </h2>

@@ -29,7 +29,7 @@ const trustPoints = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--kanani-brand-blue)] text-white">
+    <section className="relative overflow-hidden bg-[var(--kanan-brand-blue)] text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_80%_at_75%_5%,rgba(255,255,255,0.18),transparent_65%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-25">
         <div className="h-full w-full bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:170px_170px]" />
@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="lg:col-span-7">
             {/* <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-100">
               <FoundationIcon className="h-3.5 w-3.5" />
-              Kanani Services Limited
+              kanan Services Limited
             </p> */}
 
             <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
