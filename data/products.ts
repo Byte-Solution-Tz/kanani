@@ -1,4 +1,4 @@
-export type ProductCategoryId = "scrap" | "steel" | "cement" | "hardware" | "plastic";
+export type ProductCategoryId = "scrap" | "steel" | "roofing" | "cement" | "hardware" | "plastic";
 
 export type ProductSpec = {
   property: string;
@@ -50,7 +50,7 @@ export type ProductDetailEntry = {
   relatedProducts: RelatedProduct[];
 };
 
-export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "cement", "hardware", "plastic"];
+export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "roofing", "cement", "hardware", "plastic"];
 
 export function isProductCategory(value: string): value is ProductCategoryId {
   return productCategoryIds.includes(value as ProductCategoryId);
@@ -68,6 +68,7 @@ const imageGypsumBoards = "/images/products/hardware/gypsum_boards.jpeg";
 const imageRoofingMaterials = "/images/products/hardware/roofing_material.webp";
 const imagePlasticRecyclingPP = "/images/products/plastic_recycling/plastic_recycling_pp.webp";
 const imagePlasticRecyclingPE = "/images/products/plastic_recycling/plastic_recycling_pe.jpg";
+const imagePlasticProducts = "/images/products/plastic_recycling/plastic_recycling_pe.jpg";
 
 export const products: CatalogProduct[] = [
   {
@@ -148,6 +149,214 @@ export const products: CatalogProduct[] = [
       "Fabrication-ready steel lengths",
       "Suitable for industrial structures",
       "Project-scale supply capability",
+    ],
+  },
+  {
+    id: "tmt-b500-steel-bars",
+    slug: "tmt-b500-steel-bars",
+    name: "TMT B500 Steel Bars",
+    category: "steel",
+    image: imageSteelRebars,
+    description:
+      "High-grade TMT B500 steel bars supplied for reinforced concrete structures, foundations, and high-load construction works.",
+    spec: "B500 reinforcement bars in project-ready bundles",
+    posterHighlights: [
+      "TMT B500 steel bars",
+      "High-tensile reinforcement supply",
+      "Consistent sizing and bundled dispatch",
+      "Suitable for civil and structural works",
+    ],
+  },
+  {
+    id: "wire-rod",
+    slug: "wire-rod",
+    name: "Wire Rod",
+    category: "steel",
+    image: imageSteelRebars,
+    description:
+      "Reliable wire rod supply for fabrication, mesh production, binding applications, and industrial processing needs.",
+    spec: "Coiled wire rod in standard industrial grades",
+    posterHighlights: [
+      "Wire rod supply",
+      "Fabrication and mesh applications",
+      "Industrial-grade coiled steel",
+      "Bulk dispatch support",
+    ],
+  },
+  {
+    id: "hollow-sections",
+    slug: "hollow-sections",
+    name: "Hollow Sections",
+    category: "steel",
+    image: imageSteelBeems,
+    description:
+      "Square and rectangular hollow sections for frames, supports, gates, sheds, and structural fabrication projects.",
+    spec: "Square and rectangular hollow steel sections",
+    posterHighlights: [
+      "Hollow sections",
+      "Structural and fabrication use",
+      "Square and rectangular profiles",
+      "Project-scale stock availability",
+    ],
+  },
+  {
+    id: "black-pipes",
+    slug: "black-pipes",
+    name: "Black Pipes",
+    category: "steel",
+    image: imageSteelBeems,
+    description:
+      "Black steel pipes supplied for mechanical services, fabrication, fluid transfer lines, and industrial support structures.",
+    spec: "Black steel pipes in standard wall thickness options",
+    posterHighlights: [
+      "Black steel pipes",
+      "Industrial and fabrication use",
+      "Multiple diameter options",
+      "Reliable stock and dispatch",
+    ],
+  },
+  {
+    id: "angle-iron",
+    slug: "angle-iron",
+    name: "Angle Iron",
+    category: "steel",
+    image: imageSteelBeems,
+    description:
+      "Angle iron lengths for fabrication, framing, reinforcement works, supports, and general steel construction needs.",
+    spec: "Mild steel angle sections",
+    posterHighlights: [
+      "Angle iron supply",
+      "Fabrication-ready lengths",
+      "Framing and support applications",
+      "Consistent project stock",
+    ],
+  },
+  {
+    id: "flat-bars",
+    slug: "flat-bars",
+    name: "Flat Bars",
+    category: "steel",
+    image: imageSteelSheets,
+    description:
+      "Flat bar steel for gates, brackets, fabrication details, structural reinforcement, and workshop applications.",
+    spec: "Flat bar steel in standard widths and thicknesses",
+    posterHighlights: [
+      "Flat bars",
+      "General fabrication support",
+      "Workshop and site applications",
+      "Standard dimensional supply",
+    ],
+  },
+  {
+    id: "hr-plates",
+    slug: "hr-plates",
+    name: "HR Plates",
+    category: "steel",
+    image: imageSteelSheets,
+    description:
+      "Hot rolled steel plates for structural fabrication, machine bases, industrial works, and heavy-duty metal applications.",
+    spec: "Hot rolled steel plates in multiple thickness ranges",
+    posterHighlights: [
+      "HR plates",
+      "Hot rolled steel plate supply",
+      "Heavy-duty fabrication use",
+      "Industrial project readiness",
+    ],
+  },
+  {
+    id: "z-purlins",
+    slug: "z-purlins",
+    name: "Z-Purlins",
+    category: "steel",
+    image: imageSteelSheets,
+    description:
+      "Z-purlins supplied for roofing support systems, industrial sheds, warehouse structures, and steel framing works.",
+    spec: "Cold-formed Z-purlins for roofing support",
+    posterHighlights: [
+      "Z-purlins",
+      "Roof support framing",
+      "Warehouse and shed applications",
+      "Consistent profile supply",
+    ],
+  },
+  {
+    id: "chequered-plates",
+    slug: "chequered-plates",
+    name: "Chequered Plates",
+    category: "steel",
+    image: imageSteelSheets,
+    description:
+      "Durable chequered steel plates for walkways, ramps, platforms, vehicle bodies, and anti-slip industrial surfaces.",
+    spec: "Chequered steel plates with anti-slip surface pattern",
+    posterHighlights: [
+      "Chequered plates",
+      "Anti-slip steel surfaces",
+      "Walkway and platform use",
+      "Industrial-grade plate stock",
+    ],
+  },
+  {
+    id: "aluzinki-corrugated-sheets",
+    slug: "aluzinki-corrugated-sheets",
+    name: "Aluzinki Corrugated Sheets",
+    category: "roofing",
+    image: imageRoofingMaterials,
+    description:
+      "Aluzinki corrugated sheets supplied for durable roofing solutions with weather resistance for residential, commercial, and industrial projects.",
+    spec: "Aluzinki corrugated roofing sheets",
+    posterHighlights: [
+      "Aluzinki corrugated sheets",
+      "Weather-resistant roofing supply",
+      "Multiple lengths and gauges",
+      "Project-ready roofing stock",
+    ],
+  },
+  {
+    id: "rangi-corrugated-sheets",
+    slug: "rangi-corrugated-sheets",
+    name: "Rangi Corrugated Sheets",
+    category: "roofing",
+    image: imageRoofingMaterials,
+    description:
+      "Colored corrugated roofing sheets for durable roof finishes across residential, commercial, and industrial developments.",
+    spec: "Pre-painted corrugated roofing sheets",
+    posterHighlights: [
+      "Rangi corrugated sheets",
+      "Color-finished roofing supply",
+      "Durable coated sheet profiles",
+      "Consistent stock availability",
+    ],
+  },
+  {
+    id: "it4-it5-roofing-sheets",
+    slug: "it4-it5-roofing-sheets",
+    name: "IT4 and IT5",
+    category: "roofing",
+    image: imageRoofingMaterials,
+    description:
+      "IT4 and IT5 profile roofing sheets supplied for broad coverage, dependable installation, and project-scale roofing requirements.",
+    spec: "IT4 and IT5 roofing sheet profiles",
+    posterHighlights: [
+      "IT4 and IT5 profiles",
+      "Project-scale roofing coverage",
+      "Practical installation support",
+      "Multiple length options",
+    ],
+  },
+  {
+    id: "roofing-tiles",
+    slug: "roofing-tiles",
+    name: "Tiles",
+    category: "roofing",
+    image: imageRoofingMaterials,
+    description:
+      "Roofing tiles supplied for premium finishing, durability, and weather protection in residential and commercial projects.",
+    spec: "Roofing tiles for decorative and protective finishes",
+    posterHighlights: [
+      "Roofing tiles",
+      "Premium roof finishing",
+      "Weather protection performance",
+      "Residential and commercial use",
     ],
   },
   {
@@ -265,14 +474,95 @@ export const products: CatalogProduct[] = [
       "PE grade-based dispatch",
     ],
   },
+  {
+    id: "water-tank-tritank",
+    slug: "water-tank-tritank",
+    name: "Water Tank - TriTank",
+    category: "plastic",
+    image: imagePlasticProducts,
+    description:
+      "TriTank water storage solutions supplied for domestic, commercial, agricultural, and industrial water management needs.",
+    spec: "Plastic water tanks in multiple storage capacities",
+    posterHighlights: [
+      "Water Tank - TriTank",
+      "Reliable water storage capacity",
+      "Domestic and industrial applications",
+      "Durable plastic tank supply",
+    ],
+  },
+  {
+    id: "upvc-borewell-pipes",
+    slug: "upvc-borewell-pipes",
+    name: "UPVC Borewell Pipes",
+    category: "plastic",
+    image: imagePlasticProducts,
+    description:
+      "UPVC borewell pipes supplied for groundwater extraction systems with dependable pressure performance and corrosion resistance.",
+    spec: "UPVC borewell pipe systems",
+    posterHighlights: [
+      "UPVC borewell pipes",
+      "Groundwater extraction support",
+      "Corrosion-resistant pipe systems",
+      "Reliable pressure performance",
+    ],
+  },
+  {
+    id: "upvc-pipes",
+    slug: "upvc-pipes",
+    name: "UPVC Pipes",
+    category: "plastic",
+    image: imagePlasticProducts,
+    description:
+      "UPVC pipes supplied for plumbing, drainage, irrigation, and general water conveyance across building and utility projects.",
+    spec: "UPVC pipes for plumbing and drainage systems",
+    posterHighlights: [
+      "UPVC pipes",
+      "Water conveyance and drainage",
+      "Plumbing and utility applications",
+      "Reliable site-ready stock",
+    ],
+  },
+  {
+    id: "hdpe-pipes",
+    slug: "hdpe-pipes",
+    name: "HDPE Pipes",
+    category: "plastic",
+    image: imagePlasticProducts,
+    description:
+      "HDPE pipes supplied for water lines, industrial transfer systems, irrigation, and infrastructure projects requiring durable pipe performance.",
+    spec: "HDPE pipes for pressure and utility systems",
+    posterHighlights: [
+      "HDPE pipes",
+      "Pressure and utility networks",
+      "Durable industrial pipe supply",
+      "Suitable for infrastructure works",
+    ],
+  },
+  {
+    id: "ppr-pipes",
+    slug: "ppr-pipes",
+    name: "PPR Pipes",
+    category: "plastic",
+    image: imagePlasticProducts,
+    description:
+      "PPR pipes supplied for hot and cold water distribution systems in residential, commercial, and industrial plumbing installations.",
+    spec: "PPR pipes for hot and cold water systems",
+    posterHighlights: [
+      "PPR pipes",
+      "Hot and cold water distribution",
+      "Plumbing system applications",
+      "Reliable installation supply",
+    ],
+  },
 ];
 
 export const categoryLabels: Record<ProductCategoryId, string> = {
   scrap: "Scrap Materials",
   steel: "Steel Products",
+  roofing: "Roofing Materials",
   cement: "Cement Supply",
   hardware: "Hardware Suppliers",
-  plastic: "Plastic Recycling",
+  plastic: "Plastic Products",
 };
 
 const defaultFeatures: ProductFeature[] = [
@@ -303,9 +593,17 @@ const categoryApplications: Record<ProductCategoryId, string[]> = {
   ],
   steel: [
     "TMT Bars & Reinforcement Steel",
-    "Iron Sheets (Mabati) & Roofing Materials",
     "Structural Steel, Beams & Sections",
-    "High-strength steel solutions for construction and fabrication",
+    "TMT B500 Steel Bars",
+    "Wire Rod",
+    "Hollow Sections",
+    "Black Pipes",
+  ],
+  roofing: [
+    "Aluzinki Corrugated Sheets",
+    "Rangi Corrugated Sheets",
+    "IT4 and IT5",
+    "Tiles",
   ],
   cement: [
     "Authorized Distributor of Dangote Cement",
@@ -320,10 +618,11 @@ const categoryApplications: Record<ProductCategoryId, string[]> = {
     "Complete Range of Building Hardware",
   ],
   plastic: [
-    "Plastic Recycling - PP & PE Pellets",
-    "Color-Sorted Plastic Pellets",
-    "Black, yellow, and green pellet supply",
-    "PP and PE grade-based dispatch",
+    "Water Tank - TriTank",
+    "UPVC Borewell Pipes",
+    "UPVC Pipes",
+    "HDPE Pipes",
+    "PPR Pipes",
   ],
 };
 
@@ -335,10 +634,16 @@ const categorySpecs: Record<ProductCategoryId, ProductSpec[]> = {
     { property: "Buyer Segments", value: "Foundries, recyclers, and manufacturing industries" },
   ],
   steel: [
-    { property: "Core Products", value: "Rebar, beams, sections, and roofing-related steel" },
+    { property: "Core Products", value: "Rebar, bars, sections, plates, pipes, and fabrication steel" },
     { property: "Supply Model", value: "Project-based dispatch and rolling stock support" },
     { property: "Usage", value: "Construction, fabrication, and infrastructure projects" },
     { property: "Quality Control", value: "Dimensional and visual inspection before release" },
+  ],
+  roofing: [
+    { property: "Core Products", value: "Corrugated sheets, IT profiles, and roofing tiles" },
+    { property: "Supply Model", value: "Project-based roofing stock and dispatch support" },
+    { property: "Usage", value: "Residential, commercial, and industrial roofing applications" },
+    { property: "Support", value: "Sheet profile selection and quantity planning" },
   ],
   cement: [
     { property: "Brand Support", value: "Dangote cement distribution and stock planning" },
@@ -353,10 +658,10 @@ const categorySpecs: Record<ProductCategoryId, ProductSpec[]> = {
     { property: "Support", value: "One-stop project material consolidation" },
   ],
   plastic: [
-    { property: "Materials", value: "Recycled polypropylene (PP) and polyethylene (PE) pellets" },
-    { property: "Supply Options", value: "Sold by polymer type or by color stream" },
-    { property: "Color Streams", value: "Black, yellow, and green" },
-    { property: "Applications", value: "Extrusion, molding, and recycled industrial manufacturing" },
+    { property: "Core Products", value: "Water tanks, UPVC pipes, HDPE pipes, PPR pipes, and plastic pellets" },
+    { property: "Supply Options", value: "Project-ready product supply across storage, utility, and recycling needs" },
+    { property: "Applications", value: "Water systems, plumbing, irrigation, drainage, and industrial reuse" },
+    { property: "Performance", value: "Corrosion-resistant and durable plastic material solutions" },
   ],
 };
 

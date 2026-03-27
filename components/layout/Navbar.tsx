@@ -50,7 +50,7 @@ export default function Navbar() {
             {isProductsOpen ? (
               <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1320px)] -translate-x-1/2 pt-3">
                 <div className="rounded border border-slate-200 bg-white p-7 shadow-[0_22px_55px_rgba(16,34,70,0.18)]">
-                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
                     {productMenu.map((section) => (
                       <div key={section.title}>
                         <Link
