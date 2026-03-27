@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us | Kanani Services Limited",
   description:
-    "Learn who Kanan is, our mission, vision, values, and key milestones in our growth journey.",
+    "Learn how Kanan Services Limited supports construction and industrial projects in Tanzania through bulk sourcing, reliable supply, and controlled operations.",
 };
 
 const pillarIconMap: Record<AboutPillarIcon, ComponentType<{ className?: string }>> = {
@@ -42,14 +42,15 @@ export default function AboutPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_80%_5%,rgba(255,255,255,0.2),transparent_62%)]" />
         <div className="relative mx-auto max-w-7xl">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-100">
-            About Kanan - Kanani Services Limited
+            About Kanan Services Limited
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Built to Keep Construction and Industrial Projects Moving
+            Integrated Supply Solutions for Construction and Industry in Tanzania
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-blue-100">
-            Kanan delivers dependable material supply for contractors, developers, and industrial
-            buyers. Our model combines strong sourcing, practical logistics, and long-term support.
+            We specialize in bulk sourcing and supply of cement, steel, scrap, hardware, and
+            industrial materials, supporting contractors, developers, and industrial clients with
+            consistent availability, competitive pricing, and controlled operations.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link href="/products" className="btn-theme-primary rounded-full px-6 py-2.5 text-sm font-semibold">
@@ -67,22 +68,29 @@ export default function AboutPage() {
           <article className="theme-panel rounded-2xl border border-[var(--kanani-line)] p-7 sm:p-8">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--kanani-muted)]">Who We Are</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-[var(--kanani-text)] sm:text-4xl">
-              A trusted sourcing and logistics partner for East African projects
+              Built on structured procurement, strong supplier networks, and disciplined execution
             </h2>
             <blockquote className="mt-6 border-l-2 border-[var(--kanani-brand-blue)] pl-4">
               <p className="text-xl italic leading-8 text-[var(--kanani-text)]">
-                We do not just supply materials, we help projects stay on schedule.
+                Reliable supply starts with disciplined sourcing and ends with dependable delivery.
               </p>
               <p className="mt-2 text-xs tracking-wide text-[var(--kanani-muted)]">KANAN OPERATIONS TEAM</p>
             </blockquote>
             <p className="theme-muted mt-5 text-sm leading-7 sm:text-base">
-              We support both independent contractors and large organizations with responsive supply
-              planning, transparent procurement, and dependable dispatch. Our team is structured to
-              reduce material delays so your timeline stays on track.
+              Kanan Services Limited is an integrated supply solutions company serving construction
+              and industrial projects across Tanzania. We work with large-scale developers,
+              independent contractors, and industrial buyers who depend on reliable access to
+              essential materials.
             </p>
             <p className="theme-muted mt-4 text-sm leading-7 sm:text-base">
-              From bagged cement to reinforcement steel and site hardware, we focus on practical
-              execution and accountable service across every order cycle.
+              Our operations are designed around structured procurement processes, dependable
+              supplier relationships, and controlled execution that helps maintain uninterrupted
+              material availability for projects of different sizes.
+            </p>
+            <p className="theme-muted mt-4 text-sm leading-7 sm:text-base">
+              With growing logistics capability, we support smoother coordination from sourcing to
+              delivery so clients can protect project timelines, improve operational efficiency, and
+              build with confidence.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {aboutServicePills.map((pill) => (
@@ -147,8 +155,8 @@ export default function AboutPage() {
             Milestones That Shaped Us
           </h2>
           <p className="theme-muted mt-4 max-w-3xl text-sm leading-7 sm:text-base">
-            Our growth has been driven by operational discipline and customer trust, expanding from
-            focused trading to integrated supply for construction and industry.
+            Our growth reflects a steady expansion from trading and recycling roots into a more
+            structured supply model for construction and industrial clients across Tanzania.
           </p>
 
           <div className="mt-10">

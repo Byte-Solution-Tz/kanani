@@ -16,25 +16,25 @@ export type MilestoneItem = {
 export const aboutWhoWeAreImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDDNzj-7PN4GH7yns-6TIn-b3U3mp5wL3e-B8z9Jj4nvnKKGKPMClBsbvds0wxIkk3fCgqPpz7JMlkZH9TbYct5b0gVQgjEqRSRx1z1R6Q9Sf-Y41RGNypo0maY6-KUjY8p1Hhbrp9p0y-kagjlDRokUrkFWWpIQpNfrtRZcOmIbY_ebJlhUZMBVtbA6SC-BZO1pMV1qGzulEL6HTQXQmXZFuGVBvGh9rBryhN3wEfgmWDyM2T3p3Tujv0bK-2JOETT9QDMPdc_FgGr";
 
-export const aboutServicePills = ["Cement Supply", "Structural Steel", "Site Hardware", "Bulk Orders"];
+export const aboutServicePills = ["Bulk Sourcing", "Cement & Steel", "Scrap & Hardware", "Industrial Supply"];
 
 export const aboutPillars: AboutPillar[] = [
   {
     title: "Mission",
     description:
-      "Deliver dependable material supply with quality assurance, transparent communication, and on-time dispatch for active projects.",
+      "Support construction and industrial clients with dependable supply, consistent availability, and accountable service from sourcing to delivery.",
     icon: "mission",
   },
   {
     title: "Vision",
     description:
-      "Become East Africa's most trusted construction and industrial supply partner through disciplined execution and long-term customer value.",
+      "Become Tanzania's most trusted trading and supply partner for construction and industrial materials through disciplined execution and long-term value.",
     icon: "vision",
   },
   {
     title: "Values",
     description:
-      "Reliability, quality, and accountability guide how we source, stock, and deliver every order.",
+      "Reliability, operational discipline, transparency, and partnership guide how we source, stock, and deliver every order.",
     icon: "values",
   },
 ];

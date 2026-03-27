@@ -26,15 +26,19 @@ export default function AboutSection() {
             Professional Supply Solutions for Large-Scale Projects
           </h2>
           <p className="theme-muted mt-6 max-w-xl">
-            Kanan Services Limited is a premier provider of essential construction material and
-            industrial supplies. We pride ourselves on being a reliable partner for large-scale
-            developers and independent contractors alike.
+            Kanan Services Limited is a “Integrated Supply Solutions Company” specializing in the sourcing 
+            and supply of construction and industrial materials across Tanzania. We serve both large-scale developers 
+            and independent contractors with a focus on reliability, consistency, and long-term partnerships.
           </p>
           <p className="theme-muted mt-4 max-w-xl">
-            Ensuring quality and consistency in every delivery is our core mission. From massive
-            structural steel components to specialized hardware, we source only the best materials
-            to support project safety and durability.
+            Our operations are built on structured procurement processes, strong supplier networks, and disciplined execution 
+            to ensure uninterrupted material availability for projects of all sizes.
           </p>
+
+          <p className="theme-muted mt-4 max-w-xl">
+            Along with our growing logistics capability, we support efficient coordination from sourcing to delivery, helping clients maintain project timelines and operational efficiency.
+          </p>
+
 
           <Link
             href="/about"
