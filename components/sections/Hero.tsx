@@ -44,16 +44,16 @@ export default function Hero() {
             </p> */}
 
             <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
-              Trusted Partner for
+              Reliable Trading Partner for
               <br />
               Cement, Steel, Scrap
               <br />
-              &amp; Hardware Supply
+              &amp; Industrial Supply in Tanzania
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100">
-              We deliver consistent material supply for contractors, developers, and industrial
-              buyers with dependable logistics, practical pricing, and quality-first handling.
+              We specialize in bulk sourcing and supply of construction and industrial materials, supporting contractors, developers, 
+              and industrial clients with consistent availability, competitive pricing, and controlled operations.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -90,7 +90,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {trustPoints.map((point) => (
             <article
               key={point.label}
@@ -105,7 +105,7 @@ export default function Hero() {
               </div>
             </article>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

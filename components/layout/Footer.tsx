@@ -74,8 +74,10 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-base text-white/80">
               <li>- Cement Supply</li>
               <li>- Steel Products</li>
+              <li>- Roofing Materials</li>
               <li>- Hardware Supplies</li>
               <li>- Scrap Materials</li>
+              <li>- Plastic Products</li>
             </ul>
           </div>
 

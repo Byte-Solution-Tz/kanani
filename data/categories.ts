@@ -7,7 +7,12 @@ export const categories = [
   {
     id: "steel",
     title: "Steel Products",
-    description: "TMT bars, iron sheets (mabati), and structural steel beams and sections.",
+    description: "TMT bars, wire rod, hollow sections, pipes, plates, and structural steel supply.",
+  },
+  {
+    id: "roofing",
+    title: "Roofing Materials",
+    description: "Aluzinki and rangi corrugated sheets, IT4 and IT5 profiles, and roofing tiles.",
   },
   {
     id: "cement",
@@ -21,8 +26,8 @@ export const categories = [
   },
   {
     id: "plastic",
-    title: "Plastic Recycling",
+    title: "Plastic Products",
     description:
-      "Recycled PP and PE pellets supplied by resin type or by color including black, yellow, and green.",
+      "Water tanks, UPVC borewell pipes, UPVC pipes, HDPE pipes, PPR pipes, and recycled plastic pellets.",
   },
 ];

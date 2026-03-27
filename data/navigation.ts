@@ -39,6 +39,25 @@ export const productMenu: ProductMenuSection[] = [
         label: "Structural Steel, Beams & Sections",
         href: "/products/structural-steel-beams-sections",
       },
+      { label: "TMT B500 Steel Bars", href: "/products/tmt-b500-steel-bars" },
+      { label: "Wire Rod", href: "/products/wire-rod" },
+      { label: "Hollow Sections", href: "/products/hollow-sections" },
+      { label: "Black Pipes", href: "/products/black-pipes" },
+      { label: "Angle Iron", href: "/products/angle-iron" },
+      { label: "Flat Bars", href: "/products/flat-bars" },
+      { label: "HR Plates", href: "/products/hr-plates" },
+      { label: "Z-Purlins", href: "/products/z-purlins" },
+      { label: "Chequered Plates", href: "/products/chequered-plates" },
+    ],
+  },
+  {
+    title: "Roofing Materials",
+    href: "/products?category=roofing",
+    items: [
+      { label: "Aluzinki Corrugated Sheets", href: "/products/aluzinki-corrugated-sheets" },
+      { label: "Rangi Corrugated Sheets", href: "/products/rangi-corrugated-sheets" },
+      { label: "IT4 and IT5", href: "/products/it4-it5-roofing-sheets" },
+      { label: "Tiles", href: "/products/roofing-tiles" },
     ],
   },
   {
@@ -71,9 +90,14 @@ export const productMenu: ProductMenuSection[] = [
     ],
   },
   {
-    title: "Plastic Recycling",
+    title: "Plastic Products",
     href: "/products?category=plastic",
     items: [
+      { label: "Water Tank - TriTank", href: "/products/water-tank-tritank" },
+      { label: "UPVC Borewell Pipes", href: "/products/upvc-borewell-pipes" },
+      { label: "UPVC Pipes", href: "/products/upvc-pipes" },
+      { label: "HDPE Pipes", href: "/products/hdpe-pipes" },
+      { label: "PPR Pipes", href: "/products/ppr-pipes" },
       {
         label: "Plastic Recycling - PP & PE Pellets",
         href: "/products/plastic-recycling-pp-pe-pellets",

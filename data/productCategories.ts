@@ -23,9 +23,18 @@ export const productCategoryItems: ProductCategoryItem[] = [
     title: "Steel Supply Services",
     heroTitle: "Steel Supply Services",
     description:
-      "Reliable supply of high-quality steel products including rebar, structural steel, and custom fabrications for construction and industrial projects.",
+      "Reliable supply of steel products including reinforcement bars, wire rod, hollow sections, pipes, plates, and fabrication-ready materials.",
     image:
       "/images/products/steel/structural_steel.jpeg",
+  },
+  {
+    key: "roofing",
+    title: "Roofing Supply Services",
+    heroTitle: "Roofing Supply Services",
+    description:
+      "Dependable roofing material supply including Aluzinki and rangi corrugated sheets, IT4 and IT5 profiles, and roofing tiles.",
+    image:
+      "/images/products/hardware/roofing_material.webp",
   },
   {
     key: "cement",
@@ -47,10 +56,10 @@ export const productCategoryItems: ProductCategoryItem[] = [
   },
   {
     key: "plastic",
-    title: "Plastic Recycling Services",
-    heroTitle: "Plastic Recycling Services",
+    title: "Plastic Product Supply",
+    heroTitle: "Plastic Product Supply",
     description:
-      "Recycled PP and PE pellets supplied by polymer type or by color stream including black, yellow, and green.",
+      "Plastic product supply including water tanks, UPVC borewell pipes, UPVC pipes, HDPE pipes, PPR pipes, and recycled pellets.",
     image:
       "/images/products/plastic_recycling/plastic_recycling_pp.webp",
   },
