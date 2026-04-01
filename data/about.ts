@@ -16,7 +16,7 @@ export type MilestoneItem = {
 export const aboutWhoWeAreImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDDNzj-7PN4GH7yns-6TIn-b3U3mp5wL3e-B8z9Jj4nvnKKGKPMClBsbvds0wxIkk3fCgqPpz7JMlkZH9TbYct5b0gVQgjEqRSRx1z1R6Q9Sf-Y41RGNypo0maY6-KUjY8p1Hhbrp9p0y-kagjlDRokUrkFWWpIQpNfrtRZcOmIbY_ebJlhUZMBVtbA6SC-BZO1pMV1qGzulEL6HTQXQmXZFuGVBvGh9rBryhN3wEfgmWDyM2T3p3Tujv0bK-2JOETT9QDMPdc_FgGr";
 
-export const aboutServicePills = ["Bulk Sourcing", "Cement & Steel", "Scrap & Hardware", "Industrial Supply"];
+export const aboutServicePills = ["Bulk Sourcing", "Cement & Steel", "Scrap & Roofing", "Industrial Supply"];
 
 export const aboutPillars: AboutPillar[] = [
   {
@@ -70,10 +70,10 @@ export const aboutMilestones: MilestoneItem[] = [
   },
   {
     year: "2021",
-    title: "Hardware Supply Added",
+    title: "Supply Portfolio Expanded",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCz8Tddr83Lrz8iEd5qRFd_HPiHMLwGa1YXbt6vSCsjNZprNlJu_BVsZx1-DifX-q8OnrWJKJTg10yasEdoOam0siHjJO_s2XlPIwLZd6QGI4e3aG_yRWW2e0Il54UdTm-QZDClkx2yhv_Ais0NV-hTrSfUsu4hMift0OYNRRXJqdJvBYS-W5p7AeELYDpTHq0fGWSeVwnxwd5I2JlLm4TdF5M89VVjaeExcXg0k7UNVtVSMaSVi8Bf_D9hHKxhgUzEVitRNy3CW212",
-    caption: "Launched hardware supply lines to serve construction and industrial buyers end-to-end.",
+    caption: "Expanded the supply portfolio to serve construction and industrial buyers with a broader materials range.",
   },
   {
     year: "2023",

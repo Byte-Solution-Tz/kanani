@@ -216,6 +216,15 @@ export function MapPinIcon({ className }: IconProps) {
   );
 }
 
+export function ClockIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={className}>
+      <circle cx="12" cy="12" r="8.5" strokeWidth="1.8" />
+      <path d="M12 7.5v5l3.5 2" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function SocialDot({ label }: { label: string }) {
   return (
     <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-white/20 px-1 text-xs font-bold lowercase text-white/90">

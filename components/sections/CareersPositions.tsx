@@ -1,26 +1,12 @@
 import Link from "next/link";
 import { ArrowRightIcon, MapPinIcon } from "@/components/shared/icons";
 
-const positions = [
-  {
-    title: "Sales Executive",
-    department: "Sales & Business Development",
-    location: "Dar es Salaam",
-    type: "Full-time",
-  },
-  {
-    title: "Logistics Coordinator",
-    department: "Supply Chain & Logistics",
-    location: "Dar es Salaam",
-    type: "Full-time",
-  },
-  {
-    title: "Operations Manager",
-    department: "Operations",
-    location: "Moshi",
-    type: "Full-time",
-  },
-];
+const positions: Array<{
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+}> = [];
 
 export default function CareersPositions() {
   return (
@@ -32,52 +18,53 @@ export default function CareersPositions() {
         </p>
 
         <h2 className="text-3xl font-bold mb-10">
-          Current Openings
+          No open position
         </h2>
 
-        <div className="flex flex-col gap-5">
-
-          {positions.map((pos) => (
-            <div
-              key={pos.title}
-              className="theme-panel rounded-xl border theme-border p-6 flex flex-col md:flex-row md:items-center justify-between gap-5"
-            >
-
-              <div>
-
-                <div className="flex items-center gap-3 flex-wrap">
-                  <p className="font-semibold">{pos.title}</p>
-
-                  <span className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
-                    {pos.type}
-                  </span>
-                </div>
-
-                <div className="flex gap-4 mt-2 text-sm theme-muted flex-wrap">
-
-                  <span>{pos.department}</span>
-
-                  <span className="flex items-center gap-1">
-                    <MapPinIcon className="w-3 h-3" />
-                    {pos.location}
-                  </span>
-
-                </div>
-
-              </div>
-
-              <Link
-                href={`/contact?position=${encodeURIComponent(pos.title)}`}
-                className="btn-theme-blue px-5 py-2 rounded-full text-xs flex items-center gap-2"
+        {positions.length === 0 ? (
+          <div className="theme-panel rounded-xl border theme-border p-6">
+            <p className="text-base leading-7 theme-muted">
+              There are currently no open positions. You can still reach out through the contact
+              page and share your CV for future opportunities.
+            </p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-5">
+            {positions.map((pos) => (
+              <div
+                key={pos.title}
+                className="theme-panel rounded-xl border theme-border p-6 flex flex-col md:flex-row md:items-center justify-between gap-5"
               >
-                Apply Now
-                <ArrowRightIcon className="w-3 h-3" />
-              </Link>
+                <div>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <p className="font-semibold">{pos.title}</p>
 
-            </div>
-          ))}
+                    <span className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
+                      {pos.type}
+                    </span>
+                  </div>
 
-        </div>
+                  <div className="flex gap-4 mt-2 text-sm theme-muted flex-wrap">
+                    <span>{pos.department}</span>
+
+                    <span className="flex items-center gap-1">
+                      <MapPinIcon className="w-3 h-3" />
+                      {pos.location}
+                    </span>
+                  </div>
+                </div>
+
+                <Link
+                  href={`/contact?position=${encodeURIComponent(pos.title)}`}
+                  className="btn-theme-blue px-5 py-2 rounded-full text-xs flex items-center gap-2"
+                >
+                  Apply Now
+                  <ArrowRightIcon className="w-3 h-3" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </section>
