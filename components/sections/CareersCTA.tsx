@@ -8,7 +8,7 @@ export default function CareersCTA() {
         <div className="theme-panel-soft rounded-2xl px-10 py-14 text-center">
 
           <p className="uppercase tracking-[0.22em] text-xs text-blue-200 mb-4">
-            Don't see a fit?
+            Don&apos;t see a fit?
           </p>
 
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -16,7 +16,7 @@ export default function CareersCTA() {
           </h2>
 
           <p className="text-blue-100 max-w-lg mx-auto mb-8">
-            If you believe you'd be a great fit but don't see your role listed,
+            If you believe you&apos;d be a great fit but don&apos;t see your role listed,
             we would still love to hear from you.
           </p>
 

@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { ArrowRightIcon, BoxesIcon, ToolsIcon, TruckIcon, WalletIcon } from "@/components/shared/icons";
+import { BoxesIcon, ToolsIcon, TruckIcon, WalletIcon } from "@/components/shared/icons";
 
 const benefits = [
   {

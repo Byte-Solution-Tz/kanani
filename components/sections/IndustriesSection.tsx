@@ -13,7 +13,7 @@ const industries = [
     title: "Construction Companies",
     icon: BuildingIcon,
     description:
-      "Bulk cement, reinforcement steel, and hardware delivered on schedule for active site operations.",
+      "Bulk cement, reinforcement steel, roofing, and plastic systems delivered on schedule for active site operations.",
     stat: "120+ Contractors Served",
   },
   {
@@ -34,7 +34,7 @@ const industries = [
     title: "Industrial Buyers",
     icon: CraneIcon,
     description:
-      "Flexible procurement for steel, cement, hardware, and specialty industrial requirements.",
+      "Flexible procurement for steel, cement, scrap, and specialty industrial requirements.",
     stat: "Tanzania-Wide Coverage",
   },
 ];

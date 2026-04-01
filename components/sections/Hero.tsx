@@ -1,31 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  ArrowRightIcon,
-  BoxesIcon,
-  FoundationIcon,
-  TruckIcon,
-  WalletIcon,
-} from "@/components/shared/icons";
-
-const trustPoints = [
-  {
-    label: "Bulk Availability",
-    detail: "Project-scale stock support",
-    icon: BoxesIcon,
-  },
-  {
-    label: "Reliable Logistics",
-    detail: "On-time dispatch and delivery",
-    icon: TruckIcon,
-  },
-  {
-    label: "Competitive Pricing",
-    detail: "Stable rates from trusted supply chains",
-    icon: WalletIcon,
-  },
-];
+import { ArrowRightIcon } from "@/components/shared/icons";
 
 export default function Hero() {
   return (
@@ -44,11 +20,11 @@ export default function Hero() {
             </p> */}
 
             <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
-              Reliable Trading Partner for
+              Reliable Trading Partner 
               <br />
-              Cement, Steel, Scrap
+              for Construction
               <br />
-              &amp; Industrial Supply in Tanzania
+              &amp; Industrial Material in Tanzania
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100">

@@ -1,4 +1,4 @@
-export type ProductCategoryId = "scrap" | "steel" | "roofing" | "cement" | "hardware" | "plastic";
+export type ProductCategoryId = "scrap" | "steel" | "roofing" | "cement" | "plastic";
 
 export type ProductSpec = {
   property: string;
@@ -50,7 +50,7 @@ export type ProductDetailEntry = {
   relatedProducts: RelatedProduct[];
 };
 
-export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "roofing", "cement", "hardware", "plastic"];
+export const productCategoryIds: ProductCategoryId[] = ["scrap", "steel", "roofing", "cement", "plastic"];
 
 export function isProductCategory(value: string): value is ProductCategoryId {
   return productCategoryIds.includes(value as ProductCategoryId);
@@ -62,9 +62,6 @@ const imageSteelRebars = "/images/products/steel/steel_rebars.jpeg";
 const imageSteelSheets = "/images/products/steel/steel_sheet.webp";
 const imageSteelBeems = "/images/products/steel/steel_beem.webp";
 const imageDangoteCement = "/images/products/cement/dangote_cement.webp";
-const imageConstructionWood = "/images/products/hardware/construction_wood.jpg";
-const imageMarineBoards = "/images/products/hardware/marine_boards.jpg";
-const imageGypsumBoards = "/images/products/hardware/gypsum_boards.jpeg";
 const imageRoofingMaterials = "/images/products/hardware/roofing_material.webp";
 const imagePlasticRecyclingPP = "/images/products/plastic_recycling/plastic_recycling_pp.webp";
 const imagePlasticRecyclingPE = "/images/products/plastic_recycling/plastic_recycling_pe.jpg";
@@ -82,73 +79,40 @@ export const products: CatalogProduct[] = [
     spec: "HMS 1 & 2, sorted and furnace-ready",
     posterHighlights: [
       "Heavy Melting Scrap (HMS)",
-      "Reliable Scrap Metal Purchasing",
-      "Cast Iron & Structural Scrap",
-      "Efficient Scrap Processing",
+      "Cast Iron",
+      "Scrap Metal",
     ],
   },
   {
-    id: "cast-iron-structural-scrap",
-    slug: "cast-iron-structural-scrap",
-    name: "Cast Iron & Structural Scrap",
+    id: "cast-iron",
+    slug: "cast-iron",
+    name: "Cast Iron",
     category: "scrap",
     image: imageCastIronScrap,
     description:
-      "Consistent cast iron and structural cut-off scrap streams for industrial recycling operations.",
-    spec: "Segregated cast iron and structural mixed loads",
+      "Consistent cast iron scrap supply for foundries, recyclers, and industrial recovery operations.",
+    spec: "Segregated cast iron scrap loads",
     posterHighlights: [
-      "Foundry-ready cast iron scrap",
-      "Structural steel cut-off recovery",
+      "Cast Iron",
+      "Foundry-ready scrap supply",
       "Bulk loading and dispatch support",
       "Quality-sorted scrap streams",
     ],
   },
   {
-    id: "tmt-bars-reinforcement-steel",
-    slug: "tmt-bars-reinforcement-steel",
-    name: "TMT Bars & Reinforcement Steel",
-    category: "steel",
-    image: imageSteelRebars,
+    id: "scrap-metal",
+    slug: "scrap-metal",
+    name: "Scrap Metal",
+    category: "scrap",
+    image: imageHeavyMeltingScrap,
     description:
-      "High-strength steel bars for concrete reinforcement in residential, commercial, and civil works.",
-    spec: "Reinforcement bars and rebar bundles",
+      "General scrap metal supply for industrial recycling, steel melting, and bulk material recovery needs.",
+    spec: "Mixed scrap metal sorted for industrial reuse",
     posterHighlights: [
-      "TMT Bars & Reinforcement Steel",
-      "High-strength steel solutions",
-      "Construction and fabrication supply",
-      "Bulk and project-based dispatch",
-    ],
-  },
-  {
-    id: "iron-sheets-mabati-roofing",
-    slug: "iron-sheets-mabati-roofing-materials",
-    name: "Iron Sheets (Mabati) & Roofing Materials",
-    category: "steel",
-    image: imageSteelSheets,
-    description:
-      "Durable iron sheets and roofing products for industrial, commercial, and residential developments.",
-    spec: "Mabati sheets, roofing profiles, accessories",
-    posterHighlights: [
-      "Iron Sheets (Mabati)",
-      "Roofing materials and accessories",
-      "Multiple gauge and profile options",
-      "Reliable stock availability",
-    ],
-  },
-  {
-    id: "structural-steel-beams-sections",
-    slug: "structural-steel-beams-sections",
-    name: "Structural Steel, Beams & Sections",
-    category: "steel",
-    image: imageSteelBeems,
-    description:
-      "Structural sections and steel beams for fabrication, frame works, and heavy load-bearing projects.",
-    spec: "Beams, channels, angles, and sections",
-    posterHighlights: [
-      "Structural steel beams and sections",
-      "Fabrication-ready steel lengths",
-      "Suitable for industrial structures",
-      "Project-scale supply capability",
+      "Scrap Metal",
+      "Industrial recycling support",
+      "Bulk loading and dispatch",
+      "Quality-sorted material streams",
     ],
   },
   {
@@ -168,6 +132,38 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
+    id: "tmt-b300-steel-bars",
+    slug: "tmt-b300-steel-bars",
+    name: "TMT B300 Steel Bars",
+    category: "steel",
+    image: imageSteelRebars,
+    description:
+      "Reliable TMT B300 steel bar supply for general reinforcement works and everyday construction needs.",
+    spec: "B300 reinforcement bars in standard lengths",
+    posterHighlights: [
+      "TMT B300 steel bars",
+      "General reinforcement applications",
+      "Consistent sizing and bundled dispatch",
+      "Project-ready stock support",
+    ],
+  },
+  {
+    id: "hollow-section",
+    slug: "hollow-section",
+    name: "Hollow Section",
+    category: "steel",
+    image: imageSteelBeems,
+    description:
+      "Square and rectangular hollow section steel for frames, supports, gates, sheds, and structural fabrication projects.",
+    spec: "Square and rectangular hollow steel sections",
+    posterHighlights: [
+      "Hollow Section",
+      "Structural and fabrication use",
+      "Square and rectangular profiles",
+      "Project-scale stock availability",
+    ],
+  },
+  {
     id: "wire-rod",
     slug: "wire-rod",
     name: "Wire Rod",
@@ -181,22 +177,6 @@ export const products: CatalogProduct[] = [
       "Fabrication and mesh applications",
       "Industrial-grade coiled steel",
       "Bulk dispatch support",
-    ],
-  },
-  {
-    id: "hollow-sections",
-    slug: "hollow-sections",
-    name: "Hollow Sections",
-    category: "steel",
-    image: imageSteelBeems,
-    description:
-      "Square and rectangular hollow sections for frames, supports, gates, sheds, and structural fabrication projects.",
-    spec: "Square and rectangular hollow steel sections",
-    posterHighlights: [
-      "Hollow sections",
-      "Structural and fabrication use",
-      "Square and rectangular profiles",
-      "Project-scale stock availability",
     ],
   },
   {
@@ -344,133 +324,82 @@ export const products: CatalogProduct[] = [
     ],
   },
   {
-    id: "roofing-tiles",
-    slug: "roofing-tiles",
-    name: "Tiles",
-    category: "roofing",
-    image: imageRoofingMaterials,
-    description:
-      "Roofing tiles supplied for premium finishing, durability, and weather protection in residential and commercial projects.",
-    spec: "Roofing tiles for decorative and protective finishes",
-    posterHighlights: [
-      "Roofing tiles",
-      "Premium roof finishing",
-      "Weather protection performance",
-      "Residential and commercial use",
-    ],
-  },
-  {
-    id: "dangote-cement-authorized-distributor",
-    slug: "dangote-cement-authorized-distributor",
-    name: "Dangote Cement (Authorized Distributor)",
+    id: "dangote-42-5n-authorised-distributor",
+    slug: "dangote-42-5n-authorised-distributor",
+    name: "Dangote 42.5N (Authorised Distributor)",
     category: "cement",
     image: imageDangoteCement,
     description:
-      "Authorized Dangote cement distribution for contractors, developers, and major construction projects.",
-    spec: "Certified Dangote cement supply channel",
+      "Authorised Dangote 42.5N cement distribution for contractors, developers, and major construction projects.",
+    spec: "Dangote 42.5N cement supply",
     posterHighlights: [
-      "Authorized Distributor of Dangote Cement",
-      "Bulk & Bagged Cement Supply",
-      "Large Inventory in Secure Warehouses",
-      "Fast & Reliable Delivery",
+      "Dangote 42.5N (Authorised Distributor)",
+      "Reliable construction cement supply",
+      "Bulk and bagged dispatch options",
+      "Site-ready stock availability",
     ],
   },
   {
-    id: "timber-construction-wood",
-    slug: "timber-construction-wood",
-    name: "Timber & Construction Wood",
-    category: "hardware",
-    image: imageConstructionWood,
+    id: "dangote-42-5r-authorised-distributor",
+    slug: "dangote-42-5r-authorised-distributor",
+    name: "Dangote 42.5R (Authorised Distributor)",
+    category: "cement",
+    image: imageDangoteCement,
     description:
-      "Timber and construction wood products for formwork, finishing, and general site applications.",
-    spec: "Construction wood and timber sections",
+      "Authorised Dangote 42.5R cement distribution for fast-setting construction and infrastructure projects.",
+    spec: "Dangote 42.5R cement supply",
     posterHighlights: [
-      "Timber & Construction Wood",
-      "Formwork and framework support",
-      "Reliable quality grading",
-      "Consistent stock for active sites",
+      "Dangote 42.5R (Authorised Distributor)",
+      "Rapid-strength cement support",
+      "Bulk and bagged dispatch options",
+      "Consistent project stock",
     ],
   },
   {
-    id: "marine-boards",
-    slug: "marine-boards",
-    name: "Marine Boards",
-    category: "hardware",
-    image: imageMarineBoards,
+    id: "huaxin",
+    slug: "huaxin",
+    name: "Huaxin",
+    category: "cement",
+    image: imageDangoteCement,
     description:
-      "Durable marine-grade boards suitable for interior applications, partitions, ceilings, and finishing works.",
-    spec: "Marine board board variants",
+      "Huaxin cement supply for builders, contractors, and infrastructure projects needing dependable performance.",
+    spec: "Huaxin cement supply",
     posterHighlights: [
-      "Marine Boards",
-      "Marine-grade durability",
-      "Interior and finishing applications",
-      "Project-ready board stock",
-
-    ],
-  },
-  {
-    id: "gypsum-boards",
-    slug: "gypsum-boards",
-    name: "Gypsum Boards",
-    category: "hardware",
-    image: imageGypsumBoards,
-    description:
-      "Quality gypsum boards for interior partitioning, ceiling applications, and finishing works in construction projects.",
-    spec: "Gypsum board board variants",
-    posterHighlights: [
-      "Gypsum Boards",
-      "Interior partitioning and ceiling solutions",
-      "Reliable quality and stock availability",
-      "Suitable for residential and commercial projects",
-      "Project-ready board stock",
-
-    ],
-  },
-  {
-    id: "roofing-finishing-materials",
-    slug: "roofing-finishing-materials",
-    name: "Roofing & Finishing Materials",
-    category: "hardware",
-    image: imageRoofingMaterials,
-    description:
-      "Essential roofing and finishing products for structural completion and final project handover quality.",
-    spec: "Roofing accessories and finishing materials",
-    posterHighlights: [
-      "Roofing & Finishing Materials",
-      "Weatherproofing support products",
-      "Final-stage construction supplies",
-      "Site-ready quantities available",
+      "Huaxin",
+      "Construction cement supply",
+      "Bulk and bagged dispatch options",
+      "Reliable stock support",
     ],
   },
   {
     id: "plastic-recycling-pp",
     slug: "plastic-recycling-pp",
-    name: "Plastic Recycling Polypropalane (PP) Pellets",
+    name: "Recycled PP Pellets",
     category: "plastic",
     image: imagePlasticRecyclingPP,
     description:
       "Recycled polypropylene (PP) pellets supplied by polymer type or by color stream including black, yellow, and green.",
     spec: "Recycled polypropylene (PP) pellets",
     posterHighlights: [
-      "Plastic Recycling - PP Pellets",
-      "Color-Sorted Plastic Pellets",
-      "Black, yellow, and green pellet supply",
+      "Recycled PP Pellets",
+      "Color-sorted pellet supply",
+      "Black, yellow, and green streams",
       "PP grade-based dispatch",
     ],
   },
   {
     id: "plastic-recycling-pe",
     slug: "plastic-recycling-pe",
-    name: "Plastic Recycling Polyethylene (PE) Pellets",
+    name: "Recycled PE Pellets",
     category: "plastic",
     image: imagePlasticRecyclingPE,
     description:
       "Recycled polyethylene (PE) pellets supplied by polymer type or by color stream including black, yellow, and green.",
     spec: "Recycled polyethylene (PE) pellets",
     posterHighlights: [
-      "Plastic Recycling - PE Pellets",
-      "Color-Sorted Plastic Pellets",
-      "Black, yellow, and green pellet supply",
+      "Recycled PE Pellets",
+      "Color-sorted pellet supply",
+      "Black, yellow, and green streams",
       "PE grade-based dispatch",
     ],
   },
@@ -561,7 +490,6 @@ export const categoryLabels: Record<ProductCategoryId, string> = {
   steel: "Steel Products",
   roofing: "Roofing Materials",
   cement: "Cement Supply",
-  hardware: "Hardware Suppliers",
   plastic: "Plastic Products",
 };
 
@@ -580,44 +508,39 @@ const defaultFeatures: ProductFeature[] = [
 
 const defaultResources: ProductResource[] = [
   { title: "Product Catalog 2026", size: "PDF - 5.1 MB", kind: "pdf" },
-  { title: "Supply Capability Sheet", size: "PDF - 1.4 MB", kind: "sheet" },
-  { title: "Technical Data Summary", size: "PDF - 0.9 MB", kind: "spec" },
 ];
 
 const categoryApplications: Record<ProductCategoryId, string[]> = {
   scrap: [
     "Heavy Melting Scrap (HMS)",
-    "Reliable Scrap Metal Purchasing",
-    "Cast Iron & Structural Scrap",
-    "Efficient Scrap Processing",
+    "Cast Iron",
+    "Scrap Metal",
   ],
   steel: [
-    "TMT Bars & Reinforcement Steel",
-    "Structural Steel, Beams & Sections",
     "TMT B500 Steel Bars",
+    "TMT B300 Steel Bars",
+    "Hollow Section",
     "Wire Rod",
-    "Hollow Sections",
     "Black Pipes",
+    "Angle Iron",
+    "Flat Bars",
+    "HR Plates",
+    "Z-Purlins",
+    "Chequered Plates",
   ],
   roofing: [
     "Aluzinki Corrugated Sheets",
     "Rangi Corrugated Sheets",
     "IT4 and IT5",
-    "Tiles",
   ],
   cement: [
-    "Authorized Distributor of Dangote Cement",
-    "Bulk & Bagged Cement Supply",
-    "Large Inventory in Secure Warehouses",
-    "Fast & Reliable Delivery",
-  ],
-  hardware: [
-    "Timber & Construction Wood",
-    "Marine & Gypsum Boards",
-    "Roofing & Finishing Materials",
-    "Complete Range of Building Hardware",
+    "Dangote 42.5N (Authorised Distributor)",
+    "Dangote 42.5R (Authorised Distributor)",
+    "Huaxin",
   ],
   plastic: [
+    "Recycled PE Pellets",
+    "Recycled PP Pellets",
     "Water Tank - TriTank",
     "UPVC Borewell Pipes",
     "UPVC Pipes",
@@ -628,37 +551,31 @@ const categoryApplications: Record<ProductCategoryId, string[]> = {
 
 const categorySpecs: Record<ProductCategoryId, ProductSpec[]> = {
   scrap: [
-    { property: "Material Group", value: "Ferrous and structural scrap materials" },
+    { property: "Material Group", value: "HMS, cast iron, and mixed scrap metal" },
     { property: "Supply Format", value: "Bulk truck load and containerized options" },
     { property: "Processing", value: "Segregation, cutting, and contaminant reduction" },
     { property: "Buyer Segments", value: "Foundries, recyclers, and manufacturing industries" },
   ],
   steel: [
-    { property: "Core Products", value: "Rebar, bars, sections, plates, pipes, and fabrication steel" },
+    { property: "Core Products", value: "TMT bars, hollow section, wire rod, black pipes, flat bars, HR plates, Z-purlins, and chequered plates" },
     { property: "Supply Model", value: "Project-based dispatch and rolling stock support" },
     { property: "Usage", value: "Construction, fabrication, and infrastructure projects" },
     { property: "Quality Control", value: "Dimensional and visual inspection before release" },
   ],
   roofing: [
-    { property: "Core Products", value: "Corrugated sheets, IT profiles, and roofing tiles" },
+    { property: "Core Products", value: "Corrugated sheets and IT roofing profiles" },
     { property: "Supply Model", value: "Project-based roofing stock and dispatch support" },
     { property: "Usage", value: "Residential, commercial, and industrial roofing applications" },
     { property: "Support", value: "Sheet profile selection and quantity planning" },
   ],
   cement: [
-    { property: "Brand Support", value: "Dangote cement distribution and stock planning" },
+    { property: "Core Products", value: "Dangote 42.5N, Dangote 42.5R, and Huaxin cement" },
     { property: "Delivery Formats", value: "Bulk and bagged cement supply" },
-    { property: "Stock Position", value: "Large inventory held in secure warehouses" },
-    { property: "Logistics", value: "Fast and reliable scheduled site delivery" },
-  ],
-  hardware: [
-    { property: "Range", value: "Timber, boards, roofing, and general building hardware" },
-    { property: "Supply Capacity", value: "Consistent stock for structural and finishing works" },
-    { property: "Buyer Segments", value: "Contractors, developers, and industrial buyers" },
-    { property: "Support", value: "One-stop project material consolidation" },
+    { property: "Stock Position", value: "Warehouse-backed inventory and planned replenishment" },
+    { property: "Logistics", value: "Scheduled project and site delivery support" },
   ],
   plastic: [
-    { property: "Core Products", value: "Water tanks, UPVC pipes, HDPE pipes, PPR pipes, and plastic pellets" },
+    { property: "Core Products", value: "Recycled PE pellets, recycled PP pellets, tanks, and plastic pipe systems" },
     { property: "Supply Options", value: "Project-ready product supply across storage, utility, and recycling needs" },
     { property: "Applications", value: "Water systems, plumbing, irrigation, drainage, and industrial reuse" },
     { property: "Performance", value: "Corrosion-resistant and durable plastic material solutions" },
@@ -723,14 +640,14 @@ const heavyMeltingScrapDetail: ProductDetailEntry = {
   summary:
     "Bulk heavy melting scrap supplied to foundries, recyclers, and manufacturing plants with consistent quality and efficient logistics support.",
   overview:
-    "Kanan Services Limited provides reliable HMS supply alongside cast iron and structural scrap streams. From procurement to processing, our team supports industrial buyers with transparent sourcing, quality sorting, and dependable dispatch schedules.",
+    "Kanan Services Limited provides reliable HMS supply alongside cast iron and scrap metal streams. From procurement to processing, our team supports industrial buyers with transparent sourcing, quality sorting, and dependable dispatch schedules.",
   features: defaultFeatures,
   applications: categoryApplications.scrap,
   specifications: [
     { property: "Material Type", value: "Heavy Melting Scrap (HMS)" },
-    { property: "Supporting Streams", value: "Cast iron and structural scrap" },
-    { property: "Processing", value: "Efficient scrap processing and grading" },
-    { property: "Supply Channel", value: "Reliable scrap metal purchasing and dispatch" },
+    { property: "Supporting Streams", value: "Cast iron and scrap metal" },
+    { property: "Processing", value: "Sorting, grading, and bulk dispatch preparation" },
+    { property: "Supply Channel", value: "Industrial scrap procurement and scheduled dispatch" },
     { property: "Buyer Segments", value: "Foundries, recyclers, and manufacturing industries" },
   ],
   resources: defaultResources,
@@ -740,16 +657,25 @@ const heavyMeltingScrapDetail: ProductDetailEntry = {
 export const productDetailsBySlug: Record<string, ProductDetailEntry> = {
   "heavy-melting-scrap-hms": heavyMeltingScrapDetail,
   "industrial-scrap-steel": heavyMeltingScrapDetail,
-  "scrap-metal": heavyMeltingScrapDetail,
+};
+
+const legacyProductSlugMap: Record<string, string> = {
+  "cast-iron-structural-scrap": "cast-iron",
+  "hollow-sections": "hollow-section",
+  "dangote-cement-authorized-distributor": "dangote-42-5n-authorised-distributor",
 };
 
 export function getProductDetailBySlug(slug: string): ProductDetailEntry {
-  const knownDetail = productDetailsBySlug[slug];
+  const normalizedSlug = legacyProductSlugMap[slug] ?? slug;
+
+  const knownDetail = productDetailsBySlug[normalizedSlug];
   if (knownDetail) {
     return knownDetail;
   }
 
-  const catalogProduct = products.find((item) => item.slug === slug || item.id === slug);
+  const catalogProduct = products.find(
+    (item) => item.slug === normalizedSlug || item.id === normalizedSlug,
+  );
   if (catalogProduct) {
     return buildPlaceholderDetail(catalogProduct);
   }

@@ -21,7 +21,12 @@ export default function Footer() {
               <MailIcon className="h-11 w-11 text-white/90" />
               <div>
                 <p className="text-xl font-bold leading-tight">Email:</p>
-                <p className="mt-2 text-base text-white/80">kanan.co.tz</p>
+                <Link
+                  href="mailto:info@kananserviceslimited.co.tz"
+                  className="mt-2 inline-block text-base text-white/80 transition hover:text-white"
+                >
+                  info@kananserviceslimited.co.tz
+                </Link>
               </div>
             </div>
 
@@ -72,11 +77,10 @@ export default function Footer() {
           <div>
             <p className="text-3xl font-semibold">All Services</p>
             <ul className="mt-8 space-y-4 text-base text-white/80">
-              <li>- Cement Supply</li>
-              <li>- Steel Products</li>
-              <li>- Roofing Materials</li>
-              <li>- Hardware Supplies</li>
               <li>- Scrap Materials</li>
+              <li>- Steel Products</li>
+              <li>- Cement Supply</li>
+              <li>- Roofing Materials</li>
               <li>- Plastic Products</li>
             </ul>
           </div>

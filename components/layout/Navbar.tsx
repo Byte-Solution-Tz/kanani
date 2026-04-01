@@ -41,12 +41,11 @@ export default function Navbar() {
               className={`rounded px-3 py-2 transition ${
                 isProductsOpen
                   ? "bg-[var(--kanan-brand-red)] text-white"
-                  : "hover:text-[var(--k                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -brand-gold-soft)]"
+                  : "hover:text-[var(--kanan-brand-gold-soft)]"
               }`}
             >
               Products
             </Link>
-                                                                                                               
             {isProductsOpen ? (
               <div className="absolute left-1/2 top-full z-50 w-[min(95vw,1320px)] -translate-x-1/2 pt-3">
                 <div className="rounded border border-slate-200 bg-white p-7 shadow-[0_22px_55px_rgba(16,34,70,0.18)]">
@@ -85,6 +84,9 @@ export default function Navbar() {
           </Link> */}
           <Link href="/careers" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
             Careers
+          </Link>
+          <Link href="/contact" className="transition hover:text-[var(--kanan-brand-gold-soft)]">
+            Contact Us
           </Link>
         </nav>
 
@@ -150,6 +152,13 @@ export default function Navbar() {
               className="text-sm font-semibold text-[var(--kanan-text)]"
             >
               Careers
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-sm font-semibold text-[var(--kanan-text)]"
+            >
+              Contact Us
             </Link>
             <Link
               href="/contact"
